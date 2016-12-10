@@ -10,9 +10,8 @@
 		EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */; };
 		EB1AE14D1DFC586E00D3BE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */; };
 		EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */; };
-		EB1AE1511DFC586E00D3BE26 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1491DFC586E00D3BE26 /* Quote.swift */; };
-		EB1AE1521DFC586E00D3BE26 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE14A1DFC586E00D3BE26 /* QuotesViewController.swift */; };
-		EB1AE1531DFC586E00D3BE26 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE14B1DFC586E00D3BE26 /* QuotesViewController.xib */; };
+		EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */; };
+		EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */; };
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -21,9 +20,8 @@
 		EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Quickeys/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Quickeys/EventMonitor.swift; sourceTree = SOURCE_ROOT; };
 		EB1AE1481DFC586E00D3BE26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Quickeys/Info.plist; sourceTree = SOURCE_ROOT; };
-		EB1AE1491DFC586E00D3BE26 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = Quickeys/Quote.swift; sourceTree = SOURCE_ROOT; };
-		EB1AE14A1DFC586E00D3BE26 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuotesViewController.swift; path = Quickeys/QuotesViewController.swift; sourceTree = SOURCE_ROOT; };
-		EB1AE14B1DFC586E00D3BE26 /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuotesViewController.xib; path = Quickeys/QuotesViewController.xib; sourceTree = SOURCE_ROOT; };
+		EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = Quickeys/NotesViewController.swift; sourceTree = SOURCE_ROOT; };
+		EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesViewController.xib; path = Quickeys/NotesViewController.xib; sourceTree = SOURCE_ROOT; };
 		EB1AE15D1DFC59D100D3BE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Quickeys/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,9 +60,8 @@
 				EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */,
 				EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */,
 				EB1AE1481DFC586E00D3BE26 /* Info.plist */,
-				EB1AE1491DFC586E00D3BE26 /* Quote.swift */,
-				EB1AE14A1DFC586E00D3BE26 /* QuotesViewController.swift */,
-				EB1AE14B1DFC586E00D3BE26 /* QuotesViewController.xib */,
+				EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */,
+				EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */,
 				EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */,
 			);
 			name = Quickeys;
@@ -130,7 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1AE1531DFC586E00D3BE26 /* QuotesViewController.xib in Resources */,
+				EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Resources */,
 				EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */,
 				EB1AE14D1DFC586E00D3BE26 /* Assets.xcassets in Resources */,
 			);
@@ -145,8 +142,7 @@
 			files = (
 				EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */,
 				EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */,
-				EB1AE1521DFC586E00D3BE26 /* QuotesViewController.swift in Sources */,
-				EB1AE1511DFC586E00D3BE26 /* Quote.swift in Sources */,
+				EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +186,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -239,6 +236,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

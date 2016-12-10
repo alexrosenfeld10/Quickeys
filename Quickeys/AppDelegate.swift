@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Quotes
+//  Quickies
 //
 //  Created by Alex Rosenfeld on 12/4/16.
 //  Copyright © 2016 Alex Rosenfeld. All rights reserved.
@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(AppDelegate.togglePopover(sender:))
         }
         
-        popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        popover.contentViewController = NotesViewController(nibName: "NotesViewController", bundle: nil)
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
             if self.popover.isShown {
@@ -67,8 +67,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.performClose(sender)
         eventMonitor?.stop()
     }
-    
-    
     
 }
 
