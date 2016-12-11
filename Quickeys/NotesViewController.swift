@@ -25,6 +25,10 @@ class NotesViewController: NSViewController {
     
     // Functions
     
+    func urlEscapeText(txt: String) -> String{
+        return txt.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+    }
+    
 }
 
 // Actions extension
@@ -37,12 +41,12 @@ extension NotesViewController {
     }
     
     @IBAction func searchWithGoogle(_ sender: NSButton) {
-        let text = inputText.attributedString().string
+        let allText = inputText.attributedString().string
         var url_text = ""
         if let selectedText = inputText.attributedSubstring(forProposedRange: inputText.selectedRange(), actualRange: nil)?.string {
-            url_text = (selectedText.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)
+            url_text = urlEscapeText(txt: selectedText)
         } else {
-            url_text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+            url_text = urlEscapeText(txt: allText)
         }
         
         if let url = URL(string: "https://www.google.com/search?q=" + url_text), NSWorkspace.shared().open(url) {
