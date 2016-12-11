@@ -64,7 +64,18 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="searchWithGoogle:" target="-2" id="eiQ-4h-AYw"/>
+                        <action selector="searchWithGoogleButtonClick:" target="-2" id="KVx-ln-qWN"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98f-uC-EY0">
+                    <rect key="frame" x="278" y="-4" width="166" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Search with Wolfram" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yPG-Fi-870">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="searchWithWolframButtonClick:" target="-2" id="FSf-Fc-H1T"/>
                     </connections>
                 </button>
             </subviews>
