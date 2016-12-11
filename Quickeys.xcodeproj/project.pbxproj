@@ -13,7 +13,7 @@
 		EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */; };
 		EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */; };
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
-		EB27926A1DFDC07D00B92AFE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
+		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +133,7 @@
 				EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Resources */,
 				EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */,
 				EB1AE14D1DFC586E00D3BE26 /* Assets.xcassets in Resources */,
+				EB27926A1DFDC07D00B92AFE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +146,6 @@
 			files = (
 				EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */,
 				EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */,
-				EB27926A1DFDC07D00B92AFE /* README.md in Sources */,
 				EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

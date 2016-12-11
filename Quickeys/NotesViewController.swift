@@ -15,6 +15,7 @@ class NotesViewController: NSViewController {
     
     let GOOGLE_URL = "https://www.google.com/search?q="
     let GOOGLE_NAME = "Google"
+    
     let WOLFRAM_URL = "https://www.wolframalpha.com/input/?i="
     let WOLFRAM_NAME = "Wolfram"
     
