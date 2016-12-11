@@ -37,10 +37,15 @@ extension NotesViewController {
     }
     
     @IBAction func searchWithGoogle(_ sender: NSButton) {
-        var text = inputText.attributedString().string
-        text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        let text = inputText.attributedString().string
+        var url_text = ""
+        if let selectedText = inputText.attributedSubstring(forProposedRange: inputText.selectedRange(), actualRange: nil)?.string {
+            url_text = (selectedText.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)
+        } else {
+            url_text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        }
         
-        if let url = URL(string: "https://www.google.com/search?q=" + text), NSWorkspace.shared().open(url) {
+        if let url = URL(string: "https://www.google.com/search?q=" + url_text), NSWorkspace.shared().open(url) {
             NSLog("browser opened successfully with google")
         } else {
             NSLog("browser failed to open")
