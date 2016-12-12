@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="NotesViewController" customModule="Quickeys" customModuleProvider="target">
             <connections>
                 <outlet property="inputText" destination="yok-VP-sRn" id="gGP-02-34H"/>
+                <outlet property="searchTarget" destination="zSg-cA-FgE" id="Qvn-KA-y46"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -56,30 +57,39 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvd-rT-uL1">
-                    <rect key="frame" x="119" y="2" width="159" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Search with Google" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s3g-8C-th9">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="searchWithGoogleButtonClick:" target="-2" id="KVx-ln-qWN"/>
-                    </connections>
-                </button>
                 <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
                     <rect key="frame" x="96" y="3" width="5" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98f-uC-EY0">
-                    <rect key="frame" x="278" y="2" width="166" height="32"/>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-cA-FgE" userLabel="Search with">
+                    <rect key="frame" x="381" y="6" width="82" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Search with Wolfram" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yPG-Fi-870">
+                    <popUpButtonCell key="cell" type="push" title="Google" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="L4T-CA-lVk" id="iJM-fo-oJl" userLabel="Search with">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="XMB-Bk-c6g">
+                            <items>
+                                <menuItem title="Google" state="on" id="L4T-CA-lVk"/>
+                                <menuItem title="Wolfram Alpha" id="ehb-9f-4wK"/>
+                                <menuItem title="Youtube" id="coA-dS-34g">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="Google Maps" id="coL-Ro-KjH">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-UL-BIA">
+                    <rect key="frame" x="276" y="2" width="105" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Search on:" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LZ1-cp-AQs">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="searchWithWolframButtonClick:" target="-2" id="FSf-Fc-H1T"/>
+                        <action selector="searchClicked:" target="-2" id="5lr-Rv-rQh"/>
                     </connections>
                 </button>
             </subviews>

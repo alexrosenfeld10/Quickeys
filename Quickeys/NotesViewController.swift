@@ -13,15 +13,23 @@ import Cocoa
 class NotesViewController: NSViewController {
     // Lets and vars
     
+    let GOOGLE_TITLE = "Google"
     let GOOGLE_URL = "https://www.google.com/search?q="
-    let GOOGLE_NAME = "Google"
-    
+
+    let WOLFRAM_TITLE = "Wolfram Alpha"
     let WOLFRAM_URL = "https://www.wolframalpha.com/input/?i="
-    let WOLFRAM_NAME = "Wolfram"
     
+    let GOOGLEMAPS_TITLE = "Google Maps"
+    let GOOGLEMAPS_URL = "https://www.google.com/maps/search/"
+
+    let YOUTUBE_TITLE = "Youtube"
+    let YOUTUBE_URL = "https://www.youtube.com/results?search_query="
+
     // Outlets
-    @IBOutlet var inputText: NSTextView!
     
+    @IBOutlet var inputText: NSTextView!
+    @IBOutlet weak var searchTarget: NSPopUpButton!
+
     // Overrides
     
     override func viewWillAppear() {
@@ -39,14 +47,20 @@ class NotesViewController: NSViewController {
         // Set our destination url
         var BASE_URL = ""
         switch website {
-        case GOOGLE_NAME:
+        case GOOGLE_TITLE:
             BASE_URL = GOOGLE_URL
             break
-        case WOLFRAM_NAME:
+        case WOLFRAM_TITLE:
             BASE_URL = WOLFRAM_URL
             break
+        case GOOGLEMAPS_TITLE:
+            BASE_URL = GOOGLEMAPS_URL
+            break
+        case YOUTUBE_TITLE:
+            BASE_URL = YOUTUBE_URL
+            break
         default:
-            NSLog("Unknown website string" + website)
+            NSLog("Unknown website string: " + website)
             return
         }
         
@@ -60,7 +74,7 @@ class NotesViewController: NSViewController {
         }
         
         if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
-            NSLog("browser opened successfully with google")
+            NSLog("browser opened successfully")
         } else {
             NSLog("browser failed to open")
             
@@ -77,12 +91,7 @@ extension NotesViewController {
         NSApplication.shared().terminate(sender)
     }
     
-    @IBAction func searchWithGoogleButtonClick(_ sender: NSButton) {
-        searchTextOnWebsite(website: GOOGLE_NAME)
+    @IBAction func searchClicked(_ sender: NSButton) {
+        searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
     }
-    
-    @IBAction func searchWithWolframButtonClick(_ sender: NSButton) {
-        searchTextOnWebsite(website: WOLFRAM_NAME)
-    }
-    
 }
