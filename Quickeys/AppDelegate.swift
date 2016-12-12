@@ -28,6 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(AppDelegate.togglePopover(sender:))
         }
         
+        statusItem.highlightMode = false
+        
         popover.contentViewController = NotesViewController(nibName: "NotesViewController", bundle: nil)
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
@@ -46,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
-    //Helper functions
+    // Helper functions
     
     func togglePopover(sender: AnyObject?) {
         if popover.isShown {

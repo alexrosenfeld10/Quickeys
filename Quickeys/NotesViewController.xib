@@ -37,7 +37,7 @@
                         <rect key="frame" x="1" y="1" width="438" height="206"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="yok-VP-sRn">
+                            <textView ambiguous="YES" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="yok-VP-sRn">
                                 <rect key="frame" x="0.0" y="0.0" width="440" height="206"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.83571428575714279" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,10 +57,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
-                    <rect key="frame" x="96" y="3" width="5" height="33"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </box>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-cA-FgE" userLabel="Search with">
                     <rect key="frame" x="381" y="6" width="82" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -92,6 +88,10 @@
                         <action selector="searchClicked:" target="-2" id="5lr-Rv-rQh"/>
                     </connections>
                 </button>
+                <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
+                    <rect key="frame" x="80" y="3" width="5" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </box>
             </subviews>
             <point key="canvasLocation" x="135" y="169"/>
         </customView>

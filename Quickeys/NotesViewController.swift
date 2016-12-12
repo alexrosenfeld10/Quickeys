@@ -13,34 +13,47 @@ import Cocoa
 class NotesViewController: NSViewController {
     // Lets and vars
     
+    let defaults = UserDefaults.standard
+    
     let GOOGLE_TITLE = "Google"
     let GOOGLE_URL = "https://www.google.com/search?q="
-
+    
     let WOLFRAM_TITLE = "Wolfram Alpha"
     let WOLFRAM_URL = "https://www.wolframalpha.com/input/?i="
     
     let GOOGLEMAPS_TITLE = "Google Maps"
     let GOOGLEMAPS_URL = "https://www.google.com/maps/search/"
-
+    
     let YOUTUBE_TITLE = "Youtube"
     let YOUTUBE_URL = "https://www.youtube.com/results?search_query="
-
+    
     // Outlets
     
     @IBOutlet var inputText: NSTextView!
     @IBOutlet weak var searchTarget: NSPopUpButton!
-
+    
     // Overrides
     
-    override func viewWillAppear() {
-        super.viewWillAppear()
-        
+    override func viewDidLoad() {
+        // Receive previous sessions data
+        if let savedUserInputTextData = defaults.string(forKey: "userInputTextData")
+        {
+            inputText.insertText(savedUserInputTextData, replacementRange: inputText.rangeForUserTextChange)
+        }
+    }
+    
+    override func viewDidDisappear() {
+        // Save the user input data. This occurs on leaving the view or on closing the app.
+        defaults.set(inputText.attributedString().string, forKey: "userInputTextData")
+        if let savedUserInputTextData = defaults.string(forKey: "userInputTextData")
+        {
+            NSLog("Saved " + savedUserInputTextData)
+        }
     }
     
     // Functions
     
     func urlEscapeText(txt: String) -> String {
-        
         let unreserved = "-._~/?"
         let allowed = NSMutableCharacterSet.alphanumeric()
         allowed.addCharacters(in: unreserved)
