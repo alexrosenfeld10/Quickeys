@@ -39,8 +39,12 @@ class NotesViewController: NSViewController {
     
     // Functions
     
-    func urlEscapeText(txt: String) -> String{
-        return txt.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+    func urlEscapeText(txt: String) -> String {
+        
+        let unreserved = "-._~/?"
+        let allowed = NSMutableCharacterSet.alphanumeric()
+        allowed.addCharacters(in: unreserved)
+        return txt.addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)!
     }
     
     func searchTextOnWebsite(website: String) {
@@ -95,3 +99,12 @@ extension NotesViewController {
         searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
     }
 }
+
+//extension String {
+//    func stringByAddingPercentEncodingForRFC3986() -> String? {
+//        let unreserved = "-._~/?"
+//        let allowed = NSMutableCharacterSet.alphanumeric()
+//        allowed.addCharacters(in: unreserved)
+//        return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
+//    }
+//}
