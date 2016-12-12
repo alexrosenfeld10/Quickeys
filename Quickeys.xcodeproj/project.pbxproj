@@ -14,6 +14,7 @@
 		EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */; };
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
+		EB91FB7A1DFF387000151B96 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91FB791DFF387000151B96 /* NotesTextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB1AE15D1DFC59D100D3BE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Quickeys/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		EB2792691DFDC07D00B92AFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB91FB791DFF387000151B96 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTextViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */,
 				EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */,
 				EB1AE1481DFC586E00D3BE26 /* Info.plist */,
+				EB91FB791DFF387000151B96 /* NotesTextViewController.swift */,
 				EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */,
 				EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */,
 				EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */,
+				EB91FB7A1DFF387000151B96 /* NotesTextViewController.swift in Sources */,
 				EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */,
 				EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */,
 			);
@@ -263,6 +267,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -276,6 +281,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
