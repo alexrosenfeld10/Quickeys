@@ -43,7 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.83571428575714279" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="438" height="206"/>
-                                <size key="maxSize" width="483" height="10000000"/>
+                                <size key="maxSize" width="485" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             </textView>
                         </subviews>
@@ -87,7 +87,7 @@
                         </menu>
                     </popUpButtonCell>
                 </popUpButton>
-                <button translatesAutoresizingMaskIntoConstraints="NO" id="4ro-3M-iWx">
+                <button toolTip="Clear all text" translatesAutoresizingMaskIntoConstraints="NO" id="4ro-3M-iWx" userLabel="Clear all text">
                     <rect key="frame" x="20" y="253" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="16" id="53C-P5-BKc"/>
@@ -101,7 +101,7 @@
                         <action selector="clearTextClicked:" target="-2" id="Gwd-H0-9VY"/>
                     </connections>
                 </button>
-                <button translatesAutoresizingMaskIntoConstraints="NO" id="xUF-8e-ToU">
+                <button toolTip="Copy selected or all text" translatesAutoresizingMaskIntoConstraints="NO" id="xUF-8e-ToU" userLabel="Copy text">
                     <rect key="frame" x="46" y="253" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="4GG-qJ-Fxm"/>
@@ -115,7 +115,7 @@
                         <action selector="copyTextClicked:" target="-2" id="lQ4-Rf-u0s"/>
                     </connections>
                 </button>
-                <button translatesAutoresizingMaskIntoConstraints="NO" id="iJW-HF-xOs">
+                <button toolTip="Cut selected or all text" translatesAutoresizingMaskIntoConstraints="NO" id="iJW-HF-xOs" userLabel="Cut text">
                     <rect key="frame" x="72" y="253" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="Ajd-CW-AU2"/>
