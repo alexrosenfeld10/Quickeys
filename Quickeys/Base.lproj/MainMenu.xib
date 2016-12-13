@@ -108,23 +108,6 @@
                                     <action selector="saveDocumentAs:" target="-1" id="IFR-z7-cJO"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Revert to Saved" keyEquivalent="r" id="kZd-CI-I55">
-                                <connections>
-                                    <action selector="revertDocumentToSaved:" target="-1" id="Ek6-Rj-g54"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="qxp-xj-KyC"/>
-                            <menuItem title="Page Setup…" keyEquivalent="P" id="oWy-XT-JIo">
-                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
-                                <connections>
-                                    <action selector="runPageLayout:" target="-1" id="8V6-dp-nsc"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Print…" keyEquivalent="p" id="i72-pH-U9C">
-                                <connections>
-                                    <action selector="print:" target="-1" id="jUd-mN-aI4"/>
-                                </connections>
-                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -650,7 +633,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="Qag-ng-yFK">
                         <items>
-                            <menuItem title="test Help" keyEquivalent="?" id="E2E-7C-7gj">
+                            <menuItem title="Quickeys Help" keyEquivalent="?" id="E2E-7C-7gj">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="4Rw-kb-FsT"/>
                                 </connections>

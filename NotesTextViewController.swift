@@ -18,6 +18,5 @@ class NotesTextViewController: NSTextView {
         } else {
             super.keyDown(with: event)
         }
-        
     }
 }
