@@ -44,7 +44,7 @@ class NotesViewController: NSViewController {
     
     override func viewDidDisappear() {
         // Save the user input data. This occurs on leaving the view or on closing the app.
-        defaults.set(inputText.attributedString().string, forKey: "userInputTextData")
+        defaults.set(getAllTextFromView(), forKey: "userInputTextData")
         if let savedUserInputTextData = defaults.string(forKey: "userInputTextData")
         {
             NSLog("Saved " + savedUserInputTextData)
@@ -52,6 +52,24 @@ class NotesViewController: NSViewController {
     }
     
     // Functions
+    
+    func getAllTextFromView() -> String {
+        return inputText.attributedString().string
+    }
+    
+    func getHighlightedOrAllTextFromView() -> String {
+        if let selectedText = inputText.attributedSubstring(forProposedRange: inputText.selectedRange(), actualRange: nil)?.string {
+            return selectedText
+        } else {
+            return getAllTextFromView()
+        }
+    }
+    
+    func copyTextFromView() {
+        let pasteBoard = NSPasteboard.general()
+        pasteBoard.clearContents()
+        pasteBoard.setString(getHighlightedOrAllTextFromView(), forType: NSStringPboardType)
+    }
     
     func urlEscapeText(txt: String) -> String {
         let unreserved = "-._~/?"
@@ -81,14 +99,7 @@ class NotesViewController: NSViewController {
             return
         }
         
-        let allText = inputText.attributedString().string
-        var url_text = ""
-        
-        if let selectedText = inputText.attributedSubstring(forProposedRange: inputText.selectedRange(), actualRange: nil)?.string {
-            url_text = urlEscapeText(txt: selectedText)
-        } else {
-            url_text = urlEscapeText(txt: allText)
-        }
+        let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
         
         if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
             NSLog("browser opened successfully")
@@ -110,5 +121,23 @@ extension NotesViewController {
     
     @IBAction func searchClicked(_ sender: NSButton) {
         searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
+    }
+    
+    @IBAction func clearTextClicked(_ sender: NSButton) {
+        inputText.textStorage?.mutableString.setString("")
+    }
+    
+    @IBAction func copyTextClicked(_ sender: NSButton) {
+        copyTextFromView()
+    }
+    
+    @IBAction func cutTextClicked(_ sender: NSButton) {
+        copyTextFromView()
+        let textRange = inputText.selectedRange()
+        if (textRange.length == 0){
+            inputText.textStorage?.mutableString.setString("")
+        } else {
+            inputText.textStorage?.mutableString.deleteCharacters(in: textRange)
+        }
     }
 }
