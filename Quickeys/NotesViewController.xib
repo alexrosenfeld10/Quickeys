@@ -65,51 +65,18 @@
                         </menu>
                     </popUpButtonCell>
                 </popUpButton>
-                <button toolTip="Clear all text" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ro-3M-iWx" userLabel="Clear all text">
-                    <rect key="frame" x="20" y="253" width="16" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="Sy3-6E-sz5">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="clearTextClicked:" target="-2" id="Gwd-H0-9VY"/>
-                    </connections>
-                </button>
-                <button toolTip="Copy selected or all text" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUF-8e-ToU" userLabel="Copy text">
-                    <rect key="frame" x="46" y="253" width="16" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="b5b-4r-Srz">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="copyTextClicked:" target="-2" id="lQ4-Rf-u0s"/>
-                    </connections>
-                </button>
-                <button toolTip="Cut selected or all text" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJW-HF-xOs" userLabel="Cut text">
-                    <rect key="frame" x="72" y="253" width="16" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="wef-Re-mBu">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="cutTextClicked:" target="-2" id="uFD-Ms-Ea1"/>
-                    </connections>
-                </button>
                 <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-4x-1P7" userLabel="Notes">
-                    <rect key="frame" x="20" y="44" width="440" height="201"/>
+                    <rect key="frame" x="20" y="44" width="440" height="208"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <clipView key="contentView" ambiguous="YES" id="UYL-o9-BH9">
-                        <rect key="frame" x="1" y="1" width="438" height="199"/>
+                        <rect key="frame" x="1" y="1" width="438" height="206"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="r4x-me-aTD" customClass="NotesTextViewController" customModule="Quickeys" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="438" height="199"/>
+                                <rect key="frame" x="0.0" y="0.0" width="438" height="206"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.74553571432857146" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="438" height="199"/>
+                                <size key="minSize" width="438" height="206"/>
                                 <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -121,14 +88,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="rLf-ja-sFH">
-                        <rect key="frame" x="423" y="1" width="16" height="199"/>
+                        <rect key="frame" x="423" y="1" width="16" height="206"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="End-o2-H8n">
-                    <rect key="frame" x="20" y="247" width="440" height="5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </box>
             </subviews>
             <point key="canvasLocation" x="135" y="169"/>
         </customView>

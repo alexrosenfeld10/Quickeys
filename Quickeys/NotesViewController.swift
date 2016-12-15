@@ -122,22 +122,4 @@ extension NotesViewController {
     @IBAction func searchClicked(_ sender: NSButton) {
         searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
     }
-    
-    @IBAction func clearTextClicked(_ sender: NSButton) {
-        inputText.textStorage?.mutableString.setString("")
-    }
-    
-    @IBAction func copyTextClicked(_ sender: NSButton) {
-        copyTextFromView()
-    }
-    
-    @IBAction func cutTextClicked(_ sender: NSButton) {
-        copyTextFromView()
-        let textRange = inputText.selectedRange()
-        if (textRange.length == 0){
-            inputText.textStorage?.mutableString.setString("")
-        } else {
-            inputText.textStorage?.mutableString.deleteCharacters(in: textRange)
-        }
-    }
 }
