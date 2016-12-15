@@ -65,12 +65,6 @@ class NotesViewController: NSViewController {
         }
     }
     
-    func copyTextFromView() {
-        let pasteBoard = NSPasteboard.general()
-        pasteBoard.clearContents()
-        pasteBoard.setString(getHighlightedOrAllTextFromView(), forType: NSStringPboardType)
-    }
-    
     func urlEscapeText(txt: String) -> String {
         let unreserved = "-._~/?"
         let allowed = NSMutableCharacterSet.alphanumeric()
@@ -105,7 +99,6 @@ class NotesViewController: NSViewController {
             NSLog("browser opened successfully")
         } else {
             NSLog("browser failed to open")
-            
         }
     }
 }
