@@ -31,7 +31,7 @@
                     </connections>
                 </button>
                 <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
-                    <rect key="frame" x="80" y="3" width="5" height="33"/>
+                    <rect key="frame" x="80" y="3" width="4" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-UL-BIA">
@@ -92,6 +92,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-eX-Tep">
+                    <rect key="frame" x="85" y="2" width="93" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Pastebin" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3W3-XQ-cbH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="pastebinClicked:" target="-2" id="qPl-ka-Vmo"/>
+                    </connections>
+                </button>
             </subviews>
             <point key="canvasLocation" x="135" y="169"/>
         </customView>

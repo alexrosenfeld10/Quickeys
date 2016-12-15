@@ -13,6 +13,8 @@ import Cocoa
 class NotesViewController: NSViewController {
     // Lets and vars
     
+    let pastebinAPI = PastebinAPI()
+    
     let defaults = UserDefaults.standard
     
     let GOOGLE_TITLE = "Google"
@@ -114,5 +116,9 @@ extension NotesViewController {
     
     @IBAction func searchClicked(_ sender: NSButton) {
         searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
+    }
+    
+    @IBAction func pastebinClicked(_ sender: NSButton) {
+        pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: getHighlightedOrAllTextFromView()))
     }
 }
