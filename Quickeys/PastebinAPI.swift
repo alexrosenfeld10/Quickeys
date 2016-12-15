@@ -11,8 +11,20 @@ import Cocoa
 
 class PastebinAPI {
     
-    let API_KEY = "sample-api-key"
+    var API_KEY = ""
+    
+    init() {
+        API_KEY = valueForAPIKey(named: "API_KEY")
+    }
+    
     let url = NSURL(string: "http://pastebin.com/api/api_post.php")
+    
+    func valueForAPIKey(named keyname:String) -> String {
+        let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
+        let plist = NSDictionary(contentsOfFile:filePath!)
+        let value = plist?.object(forKey: keyname) as! String
+        return value
+    }
     
     func postPasteRequest(urlEscapedContent: String) {
         

@@ -19,3 +19,5 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 .DS_STORE
+ApiKeys.plist
+
