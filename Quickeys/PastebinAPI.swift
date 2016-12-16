@@ -30,7 +30,7 @@ class PastebinAPI {
         
         var request = URLRequest(url: URL(string: "http://pastebin.com/api/api_post.php")!)
         request.httpMethod = "POST"
-        let postString = "api_paste_code=\(urlEscapedContent)&api_dev_key=\(API_KEY)&api_option=paste&api_paste_private=1"
+        let postString = "api_paste_code=\(urlEscapedContent)&api_dev_key=\(API_KEY)&api_option=paste&api_paste_private=1&api_paste_expire_date=N"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
