@@ -8,10 +8,13 @@
 
 import Foundation
 import Cocoa
+import AVFoundation
+import SystemConfiguration
 
 class PastebinAPI {
     
     var API_KEY = ""
+    var player: AVAudioPlayer?
     
     init() {
         API_KEY = valueForAPIKey(named: "API_KEY")
@@ -32,32 +35,52 @@ class PastebinAPI {
         request.httpMethod = "POST"
         let postString = "api_paste_code=\(urlEscapedContent)&api_dev_key=\(API_KEY)&api_option=paste&api_paste_private=1&api_paste_expire_date=N"
         request.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                NSLog("error=\(error)")
-                return
+        if Reachability.isInternetAvailable() {
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                    NSLog("error=\(error)")
+                    return
+                }
+                
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                    NSLog("statusCode should be 200, but is \(httpStatus.statusCode)")
+                    NSLog("response = \(response)")
+                }
+                
+                let responseString = String(data: data, encoding: .utf8)
+                
+                let pasteBoard = NSPasteboard.general()
+                pasteBoard.clearContents()
+                if (responseString?.contains("pastebin.com"))! {
+                    NSLog(responseString!)
+                    pasteBoard.setString(responseString!, forType: NSStringPboardType)
+                } else if (responseString?.contains("maximum"))! {
+                    self.playFunkSound()
+                    NSLog(responseString!)
+                    pasteBoard.setString("http://pastebin.com", forType: NSStringPboardType)
+                } else {
+                    self.playFunkSound()
+                    NSLog(responseString!)
+                    pasteBoard.setString("http://pastebin.com", forType: NSStringPboardType)
+                }
             }
-            
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                NSLog("statusCode should be 200, but is \(httpStatus.statusCode)")
-                NSLog("response = \(response)")
-            }
-            
-            let responseString = String(data: data, encoding: .utf8)
-            
-            let pasteBoard = NSPasteboard.general()
-            pasteBoard.clearContents()
-            if (responseString?.contains("pastebin.com"))! {
-                pasteBoard.setString(responseString!, forType: NSStringPboardType)
-            } else if (responseString?.contains("maximum"))! {
-                // TODO display error message to user saying they've pasted too many times
-                NSLog(responseString!)
-                pasteBoard.setString("http://pastebin.com", forType: NSStringPboardType)
-            } else {
-                NSLog(responseString!)
-                pasteBoard.setString("http://pastebin.com", forType: NSStringPboardType)
-            }
+            task.resume()
+        } else {
+            playFunkSound()
         }
-        task.resume()
+    }
+    
+    func playFunkSound() {
+        let url = Bundle.main.url(forResource: "Funk", withExtension: "aiff")!
+        
+        do {
+            self.player = try AVAudioPlayer(contentsOf: url)
+            guard let player = self.player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            NSLog(error.localizedDescription)
+        }
     }
 }

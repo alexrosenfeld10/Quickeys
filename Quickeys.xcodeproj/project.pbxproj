@@ -18,6 +18,8 @@
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
 		EB7517A41E02228F00D60514 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7517A31E02228F00D60514 /* NotesTextViewController.swift */; };
+		EBDFA9001E04E57B00C28385 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA8FF1E04E57B00C28385 /* Funk.aiff */; };
+		EBDFA9041E04E95500C28385 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9031E04E95500C28385 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		EB2792691DFDC07D00B92AFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7517A31E02228F00D60514 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTextViewController.swift; path = Quickeys/NotesTextViewController.swift; sourceTree = SOURCE_ROOT; };
+		EBDFA8FF1E04E57B00C28385 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Funk.aiff; path = Quickeys/Funk.aiff; sourceTree = SOURCE_ROOT; };
+		EBDFA9031E04E95500C28385 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Quickeys/Reachability.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		EB16DA771E03488A00CB7883 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EBDFA8FF1E04E57B00C28385 /* Funk.aiff */,
 				EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */,
 				EB1AE1481DFC586E00D3BE26 /* Info.plist */,
 				EB16DA781E034D5600CB7883 /* ApiKeys.plist */,
@@ -91,12 +96,21 @@
 				EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */,
 				EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */,
 				EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */,
-				EB16DA721E0346D300CB7883 /* PastebinAPI.swift */,
-				EB16DA771E03488A00CB7883 /* Resources */,
+				EBDFA8FA1E04DAF900C28385 /* Pastebin */,
 				EB16DA761E03474500CB7883 /* Notes Views and Controllers */,
+				EB16DA771E03488A00CB7883 /* Resources */,
 			);
 			name = Quickeys;
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		EBDFA8FA1E04DAF900C28385 /* Pastebin */ = {
+			isa = PBXGroup;
+			children = (
+				EB16DA721E0346D300CB7883 /* PastebinAPI.swift */,
+				EBDFA9031E04E95500C28385 /* Reachability.swift */,
+			);
+			name = Pastebin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1AE14D1DFC586E00D3BE26 /* Assets.xcassets in Resources */,
+				EBDFA9001E04E57B00C28385 /* Funk.aiff in Resources */,
 				EB27926A1DFDC07D00B92AFE /* README.md in Resources */,
 				EB16DA751E03472900CB7883 /* LICENSE in Resources */,
 			);
@@ -176,6 +191,7 @@
 				EB16DA7A1E0352A300CB7883 /* ApiKeys.plist in Sources */,
 				EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */,
 				EB7517A41E02228F00D60514 /* NotesTextViewController.swift in Sources */,
+				EBDFA9041E04E95500C28385 /* Reachability.swift in Sources */,
 				EB16DA731E0346D300CB7883 /* PastebinAPI.swift in Sources */,
 				EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */,
 				EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */,

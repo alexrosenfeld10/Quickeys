@@ -31,7 +31,7 @@
                     </connections>
                 </button>
                 <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
-                    <rect key="frame" x="80" y="3" width="4" height="33"/>
+                    <rect key="frame" x="80" y="3" width="5" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-UL-BIA">
