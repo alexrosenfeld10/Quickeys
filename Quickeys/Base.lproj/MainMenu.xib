@@ -39,27 +39,10 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="FlF-mh-SYI"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="n1v-Za-EUI"/>
-                            <menuItem title="Hide test" keyEquivalent="h" id="DYJ-jn-Bd6">
-                                <connections>
-                                    <action selector="hide:" target="-1" id="8r9-Sw-0qG"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Hide Others" keyEquivalent="h" id="eEg-sl-woe">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                <connections>
-                                    <action selector="hideOtherApplications:" target="-1" id="NFk-ge-2qP"/>
-                                </connections>
-                            </menuItem>
                             <menuItem title="Show All" id="t0x-n6-sNS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="unhideAllApplications:" target="-1" id="ndq-1c-bK0"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="J88-jA-9vo"/>
-                            <menuItem title="Quit test" keyEquivalent="q" id="61e-qG-fDT">
-                                <connections>
-                                    <action selector="terminate:" target="-1" id="cGw-C8-T3J"/>
                                 </connections>
                             </menuItem>
                         </items>
