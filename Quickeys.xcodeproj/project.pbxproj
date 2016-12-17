@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB16DA731E0346D300CB7883 /* PastebinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16DA721E0346D300CB7883 /* PastebinAPI.swift */; };
 		EB16DA751E03472900CB7883 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB16DA741E03472900CB7883 /* LICENSE */; };
-		EB16DA7A1E0352A300CB7883 /* ApiKeys.plist in Sources */ = {isa = PBXBuildFile; fileRef = EB16DA781E034D5600CB7883 /* ApiKeys.plist */; };
 		EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */; };
-		EB1AE14D1DFC586E00D3BE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */; };
 		EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */; };
-		EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */; };
-		EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */; };
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
-		EB7517A41E02228F00D60514 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7517A31E02228F00D60514 /* NotesTextViewController.swift */; };
-		EBDFA9001E04E57B00C28385 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA8FF1E04E57B00C28385 /* Funk.aiff */; };
-		EBDFA9041E04E95500C28385 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9031E04E95500C28385 /* Reachability.swift */; };
+		EBDFA90B1E04ECF700C28385 /* PastebinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */; };
+		EBDFA90C1E04ECF700C28385 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90A1E04ECF700C28385 /* Reachability.swift */; };
+		EBDFA9101E04ED0A00C28385 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */; };
+		EBDFA9111E04ED0A00C28385 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90E1E04ED0A00C28385 /* NotesViewController.swift */; };
+		EBDFA9121E04ED0A00C28385 /* NotesViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90F1E04ED0A00C28385 /* NotesViewController.xib */; };
+		EBDFA9171E04ED1600C28385 /* ApiKeys.plist in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9131E04ED1600C28385 /* ApiKeys.plist */; };
+		EBDFA9181E04ED1600C28385 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9141E04ED1600C28385 /* Assets.xcassets */; };
+		EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9151E04ED1600C28385 /* Funk.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB16DA721E0346D300CB7883 /* PastebinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastebinAPI.swift; path = Quickeys/PastebinAPI.swift; sourceTree = SOURCE_ROOT; };
 		EB16DA741E03472900CB7883 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		EB16DA781E034D5600CB7883 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = ApiKeys.plist; path = Quickeys/ApiKeys.plist; sourceTree = SOURCE_ROOT; };
 		EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Quickeys/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Quickeys/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Quickeys/EventMonitor.swift; sourceTree = SOURCE_ROOT; };
-		EB1AE1481DFC586E00D3BE26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Quickeys/Info.plist; sourceTree = SOURCE_ROOT; };
-		EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = Quickeys/NotesViewController.swift; sourceTree = SOURCE_ROOT; };
-		EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesViewController.xib; path = Quickeys/NotesViewController.xib; sourceTree = SOURCE_ROOT; };
 		EB1AE15D1DFC59D100D3BE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Quickeys/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		EB2792691DFDC07D00B92AFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB7517A31E02228F00D60514 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTextViewController.swift; path = Quickeys/NotesTextViewController.swift; sourceTree = SOURCE_ROOT; };
-		EBDFA8FF1E04E57B00C28385 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Funk.aiff; path = Quickeys/Funk.aiff; sourceTree = SOURCE_ROOT; };
-		EBDFA9031E04E95500C28385 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Quickeys/Reachability.swift; sourceTree = SOURCE_ROOT; };
+		EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastebinAPI.swift; path = Quickeys/Pastebin/PastebinAPI.swift; sourceTree = SOURCE_ROOT; };
+		EBDFA90A1E04ECF700C28385 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Quickeys/Pastebin/Reachability.swift; sourceTree = SOURCE_ROOT; };
+		EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTextViewController.swift; path = "Quickeys/Notes Views and Controllers/NotesTextViewController.swift"; sourceTree = SOURCE_ROOT; };
+		EBDFA90E1E04ED0A00C28385 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = "Quickeys/Notes Views and Controllers/NotesViewController.swift"; sourceTree = SOURCE_ROOT; };
+		EBDFA90F1E04ED0A00C28385 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesViewController.xib; path = "Quickeys/Notes Views and Controllers/NotesViewController.xib"; sourceTree = SOURCE_ROOT; };
+		EBDFA9131E04ED1600C28385 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = Quickeys/Resources/ApiKeys.plist; sourceTree = SOURCE_ROOT; };
+		EBDFA9141E04ED1600C28385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Quickeys/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		EBDFA9151E04ED1600C28385 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Funk.aiff; path = Quickeys/Resources/Funk.aiff; sourceTree = SOURCE_ROOT; };
+		EBDFA9161E04ED1600C28385 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Quickeys/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +54,9 @@
 		EB16DA761E03474500CB7883 /* Notes Views and Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EB1AE14B1DFC586E00D3BE26 /* NotesViewController.xib */,
-				EB1AE14A1DFC586E00D3BE26 /* NotesViewController.swift */,
-				EB7517A31E02228F00D60514 /* NotesTextViewController.swift */,
+				EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */,
+				EBDFA90E1E04ED0A00C28385 /* NotesViewController.swift */,
+				EBDFA90F1E04ED0A00C28385 /* NotesViewController.xib */,
 			);
 			name = "Notes Views and Controllers";
 			sourceTree = "<group>";
@@ -64,10 +64,10 @@
 		EB16DA771E03488A00CB7883 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EBDFA8FF1E04E57B00C28385 /* Funk.aiff */,
-				EB1AE1451DFC586E00D3BE26 /* Assets.xcassets */,
-				EB1AE1481DFC586E00D3BE26 /* Info.plist */,
-				EB16DA781E034D5600CB7883 /* ApiKeys.plist */,
+				EBDFA9131E04ED1600C28385 /* ApiKeys.plist */,
+				EBDFA9141E04ED1600C28385 /* Assets.xcassets */,
+				EBDFA9151E04ED1600C28385 /* Funk.aiff */,
+				EBDFA9161E04ED1600C28385 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -107,8 +107,8 @@
 		EBDFA8FA1E04DAF900C28385 /* Pastebin */ = {
 			isa = PBXGroup;
 			children = (
-				EB16DA721E0346D300CB7883 /* PastebinAPI.swift */,
-				EBDFA9031E04E95500C28385 /* Reachability.swift */,
+				EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */,
+				EBDFA90A1E04ECF700C28385 /* Reachability.swift */,
 			);
 			name = Pastebin;
 			sourceTree = "<group>";
@@ -172,8 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1AE14D1DFC586E00D3BE26 /* Assets.xcassets in Resources */,
-				EBDFA9001E04E57B00C28385 /* Funk.aiff in Resources */,
+				EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */,
 				EB27926A1DFDC07D00B92AFE /* README.md in Resources */,
 				EB16DA751E03472900CB7883 /* LICENSE in Resources */,
 			);
@@ -186,15 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1AE1531DFC586E00D3BE26 /* NotesViewController.xib in Sources */,
+				EBDFA9101E04ED0A00C28385 /* NotesTextViewController.swift in Sources */,
+				EBDFA9111E04ED0A00C28385 /* NotesViewController.swift in Sources */,
 				EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Sources */,
-				EB16DA7A1E0352A300CB7883 /* ApiKeys.plist in Sources */,
+				EBDFA90B1E04ECF700C28385 /* PastebinAPI.swift in Sources */,
 				EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */,
-				EB7517A41E02228F00D60514 /* NotesTextViewController.swift in Sources */,
-				EBDFA9041E04E95500C28385 /* Reachability.swift in Sources */,
-				EB16DA731E0346D300CB7883 /* PastebinAPI.swift in Sources */,
+				EBDFA90C1E04ECF700C28385 /* Reachability.swift in Sources */,
 				EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */,
-				EB1AE1521DFC586E00D3BE26 /* NotesViewController.swift in Sources */,
+				EBDFA9181E04ED1600C28385 /* Assets.xcassets in Sources */,
+				EBDFA9121E04ED0A00C28385 /* NotesViewController.xib in Sources */,
+				EBDFA9171E04ED1600C28385 /* ApiKeys.plist in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
@@ -323,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;

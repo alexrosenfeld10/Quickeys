@@ -50,18 +50,16 @@ class PastebinAPI {
                 let responseString = String(data: data, encoding: .utf8)
                 
                 let pasteBoard = NSPasteboard.general()
-                pasteBoard.clearContents()
                 if (responseString?.contains("pastebin.com"))! {
                     NSLog(responseString!)
+                    pasteBoard.clearContents()
                     pasteBoard.setString(responseString!, forType: NSStringPboardType)
                 } else if (responseString?.contains("maximum"))! {
                     self.playFunkSound()
                     NSLog(responseString!)
-                    pasteBoard.setString("http://pastebin.com", forType: NSStringPboardType)
                 } else {
                     self.playFunkSound()
                     NSLog(responseString!)
-                    pasteBoard.setString("http://pastebin.com", forType: NSStringPboardType)
                 }
             }
             task.resume()
