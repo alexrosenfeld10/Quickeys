@@ -9,7 +9,6 @@
 import Foundation
 import Cocoa
 import AVFoundation
-import SystemConfiguration
 
 class PastebinAPI {
     
@@ -64,6 +63,7 @@ class PastebinAPI {
             }
             task.resume()
         } else {
+            NSLog("No internet connection")
             playFunkSound()
         }
     }
