@@ -25,6 +25,7 @@ class PastebinAPI {
         let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
         let plist = NSDictionary(contentsOfFile:filePath!)
         let value = plist?.object(forKey: keyname) as! String
+        // TODO encrypt the api key, and decrypt before returning value
         return value
     }
     
@@ -69,6 +70,7 @@ class PastebinAPI {
     }
     
     func playFunkSound() {
+        //TODO clean up error handling and playing
         let url = Bundle.main.url(forResource: "Funk", withExtension: "aiff")!
         
         do {

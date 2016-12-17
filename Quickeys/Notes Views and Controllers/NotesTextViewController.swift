@@ -15,7 +15,8 @@ class NotesTextViewController: NSTextView {
     override open func keyDown(with event: NSEvent) {
         if (event.keyCode == 53){
             appDelegate.togglePopover(sender: nil)
-        } else {
+        }
+        else {
             super.keyDown(with: event)
         }
     }
