@@ -70,15 +70,16 @@ class PastebinAPI {
     }
     
     func playFunkSound() {
-        //TODO clean up error handling and playing
-        let url = Bundle.main.url(forResource: "Funk", withExtension: "aiff")!
+        guard let url = Bundle.main.url(forResource: "Funk", withExtension: "aiff")
+            else {
+                NSLog("Unable to find Funk.aiff")
+                return
+        }
         
         do {
-            self.player = try AVAudioPlayer(contentsOf: url)
-            guard let player = self.player else { return }
-            
-            player.prepareToPlay()
-            player.play()
+            player = try AVAudioPlayer(contentsOf: url)
+            player!.prepareToPlay()
+            player!.play()
         } catch let error {
             NSLog(error.localizedDescription)
         }
