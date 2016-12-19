@@ -25,7 +25,6 @@ class PastebinAPI {
         let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
         let plist = NSDictionary(contentsOfFile:filePath!)
         let value = plist?.object(forKey: keyname) as! String
-        // TODO encrypt the api key, and decrypt before returning value
         return value
     }
     

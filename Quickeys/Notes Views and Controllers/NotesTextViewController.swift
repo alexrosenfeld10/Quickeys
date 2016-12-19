@@ -15,6 +15,11 @@ class NotesTextViewController: NSTextView {
     override open func keyDown(with event: NSEvent) {
         if (event.keyCode == 53){
             appDelegate.togglePopover(sender: nil)
+        } else if (event.keyCode == 36 && event.modifierFlags.contains(.command)) {
+            NSLog("Command enter pressed")
+            
+        } else if (event.keyCode == 36 && event.modifierFlags.contains(.option)) {
+            NSLog("alt/option enter pressed")
         }
         else {
             super.keyDown(with: event)
