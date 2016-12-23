@@ -10,7 +10,8 @@ import Cocoa
 
 // Notes View Controller class
 
-class NotesViewController: NSViewController {
+class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
+    
     // Lets and vars
     
     let pastebinAPI = PastebinAPI()
@@ -31,10 +32,15 @@ class NotesViewController: NSViewController {
     
     // Outlets
     
-    @IBOutlet var inputText: NSTextView!
+    
+    @IBOutlet var inputText: NotesTextViewController!
     @IBOutlet weak var searchTarget: NSPopUpButton!
     
     // Overrides
+    
+    override func awakeFromNib() {
+        inputText.notesTextViewControllerDelegate = self
+    }
     
     override func viewDidLoad() {
         // Receive previous sessions data
@@ -51,6 +57,16 @@ class NotesViewController: NSViewController {
         {
             NSLog("Saved " + savedUserInputTextData)
         }
+    }
+    
+    // Delegate functions
+    
+    func NotesTextViewiewControllerCommandEnterPressed() {
+        searchClicked(self)
+    }
+    
+    func NotesTextViewiewControllerAltOptionEnterPressed() {
+        pastebinClicked(self)
     }
     
     // Functions
@@ -114,11 +130,11 @@ extension NotesViewController {
         NSApplication.shared().terminate(sender)
     }
     
-    @IBAction func searchClicked(_ sender: NSButton) {
+    @IBAction func searchClicked(_ sender: AnyObject) {
         searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
     }
     
-    @IBAction func pastebinClicked(_ sender: NSButton) {
+    @IBAction func pastebinClicked(_ sender: AnyObject) {
         pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: getHighlightedOrAllTextFromView()))
     }
 }
