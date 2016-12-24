@@ -16,12 +16,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="372" height="169"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-fT-E51">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-fT-E51">
                     <rect key="frame" x="14" y="2" width="66" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6x2-Qf-ffl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -30,24 +29,14 @@
                         <action selector="quit:" target="-2" id="mmV-yx-9cO"/>
                     </connections>
                 </button>
-                <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
-                    <rect key="frame" x="80" y="3" width="5" height="33"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="N06-wG-Dzb">
+                    <rect key="frame" x="80" y="8" width="4" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="gVo-Ka-pQH"/>
+                    </constraints>
                 </box>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-UL-BIA">
-                    <rect key="frame" x="276" y="2" width="105" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Search on:" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LZ1-cp-AQs">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="searchClicked:" target="-2" id="5lr-Rv-rQh"/>
-                    </connections>
-                </button>
-                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-cA-FgE" userLabel="Search with">
-                    <rect key="frame" x="381" y="6" width="82" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-cA-FgE" userLabel="Search with">
+                    <rect key="frame" x="273" y="6" width="82" height="26"/>
                     <popUpButtonCell key="cell" type="push" title="Google" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="L4T-CA-lVk" id="iJM-fo-oJl" userLabel="Search with">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
@@ -65,18 +54,17 @@
                         </menu>
                     </popUpButtonCell>
                 </popUpButton>
-                <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-4x-1P7" userLabel="Notes">
-                    <rect key="frame" x="20" y="44" width="440" height="208"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <clipView key="contentView" ambiguous="YES" id="UYL-o9-BH9">
-                        <rect key="frame" x="1" y="1" width="438" height="206"/>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-4x-1P7" userLabel="Notes">
+                    <rect key="frame" x="20" y="39" width="332" height="115"/>
+                    <clipView key="contentView" id="UYL-o9-BH9">
+                        <rect key="frame" x="1" y="1" width="330" height="113"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" richText="NO" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="r4x-me-aTD" customClass="NotesTextViewController" customModule="Quickeys" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="438" height="206"/>
+                            <textView importsGraphics="NO" richText="NO" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="r4x-me-aTD" customClass="NotesTextViewController" customModule="Quickeys" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="330" height="113"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.74553571432857146" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="438" height="206"/>
+                                <size key="minSize" width="330" height="113"/>
                                 <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -88,13 +76,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="rLf-ja-sFH">
-                        <rect key="frame" x="423" y="1" width="16" height="206"/>
+                        <rect key="frame" x="315" y="1" width="16" height="113"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-eX-Tep">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-eX-Tep">
                     <rect key="frame" x="85" y="2" width="93" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Pastebin" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3W3-XQ-cbH">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -103,8 +90,39 @@
                         <action selector="pastebinClicked:" target="-2" id="qPl-ka-Vmo"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-UL-BIA">
+                    <rect key="frame" x="171" y="2" width="105" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="H6n-G3-OkV"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Search on:" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LZ1-cp-AQs">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="searchClicked:" target="-2" id="5lr-Rv-rQh"/>
+                    </connections>
+                </button>
             </subviews>
-            <point key="canvasLocation" x="135" y="169"/>
+            <constraints>
+                <constraint firstItem="LT6-4x-1P7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="1zl-CC-pJY"/>
+                <constraint firstAttribute="trailing" secondItem="LT6-4x-1P7" secondAttribute="trailing" constant="20" symbolic="YES" id="2x4-jP-WH6"/>
+                <constraint firstItem="LT6-4x-1P7" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="FFu-up-fOE"/>
+                <constraint firstAttribute="bottom" secondItem="P8M-UL-BIA" secondAttribute="bottom" constant="9" id="H9S-1Z-fbi"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="leading" secondItem="N06-wG-Dzb" secondAttribute="trailing" constant="9" id="Rwi-7v-KRu"/>
+                <constraint firstItem="P8M-UL-BIA" firstAttribute="baseline" secondItem="J6n-eX-Tep" secondAttribute="baseline" id="VBt-CX-Pki"/>
+                <constraint firstAttribute="trailing" secondItem="P8M-UL-BIA" secondAttribute="trailing" constant="102" id="VpO-gr-o8K"/>
+                <constraint firstItem="P8M-UL-BIA" firstAttribute="baseline" secondItem="KCw-fT-E51" secondAttribute="baseline" id="Vw3-rP-jXg"/>
+                <constraint firstItem="zSg-cA-FgE" firstAttribute="leading" secondItem="P8M-UL-BIA" secondAttribute="trailing" constant="5" id="aDk-In-8sG"/>
+                <constraint firstItem="zSg-cA-FgE" firstAttribute="trailing" secondItem="LT6-4x-1P7" secondAttribute="trailing" id="cqH-8N-oSB"/>
+                <constraint firstItem="N06-wG-Dzb" firstAttribute="leading" secondItem="KCw-fT-E51" secondAttribute="trailing" constant="8" symbolic="YES" id="ihn-xs-l6U"/>
+                <constraint firstItem="P8M-UL-BIA" firstAttribute="centerY" secondItem="N06-wG-Dzb" secondAttribute="centerY" id="mw0-TW-bWC"/>
+                <constraint firstItem="P8M-UL-BIA" firstAttribute="top" secondItem="LT6-4x-1P7" secondAttribute="bottom" constant="9" id="nw7-QQ-htY"/>
+                <constraint firstItem="N06-wG-Dzb" firstAttribute="top" secondItem="LT6-4x-1P7" secondAttribute="bottom" constant="8" symbolic="YES" id="pa7-Ug-Aql"/>
+                <constraint firstItem="zSg-cA-FgE" firstAttribute="baseline" secondItem="P8M-UL-BIA" secondAttribute="baseline" id="uw1-6j-JNL"/>
+                <constraint firstItem="LT6-4x-1P7" firstAttribute="leading" secondItem="KCw-fT-E51" secondAttribute="leading" id="yqE-Ri-JkP"/>
+            </constraints>
+            <point key="canvasLocation" x="67" y="117.5"/>
         </customView>
     </objects>
 </document>
