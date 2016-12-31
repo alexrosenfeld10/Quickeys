@@ -18,6 +18,10 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     let defaults = UserDefaults.standard
     
+    let FIXED_WIDTH = CGFloat(372)
+    let MIN_HEIGHT = CGFloat(169)
+    let MAX_HEIGHT = CGFloat(500)
+    
     let GOOGLE_TITLE = "Google"
     let GOOGLE_URL = "https://www.google.com/search?q="
     
@@ -31,7 +35,6 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     let YOUTUBE_URL = "https://www.youtube.com/results?search_query="
     
     // Outlets
-    
     
     @IBOutlet var inputText: NotesTextViewController!
     @IBOutlet weak var searchTarget: NSPopUpButton!
@@ -57,6 +60,24 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
         {
             NSLog("Saved " + savedUserInputTextData)
         }
+    }
+    
+    override func mouseDragged(with theEvent: NSEvent) {
+        let currentLocation = NSEvent.mouseLocation()
+        let screenFrame = NSScreen.main()?.frame
+        
+        var newY = screenFrame!.size.height - currentLocation.y
+        
+        if newY < MIN_HEIGHT {
+            newY = MIN_HEIGHT
+        }
+        
+        if newY > MAX_HEIGHT {
+            newY = MAX_HEIGHT
+        }
+        
+        let appDelegate : AppDelegate = NSApplication.shared().delegate as! AppDelegate
+        appDelegate.popover.contentSize = NSSize(width: FIXED_WIDTH, height: newY)
     }
     
     // Delegate functions
