@@ -21,3 +21,6 @@ xcuserdata/
 .DS_STORE
 ApiKeys.plist
 
+## Pods
+
+Pods*
