@@ -37,12 +37,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         eventMonitor?.start()
         
+        let shortcut = MASShortcut.init(keyCode: UInt(kVK_ANSI_8), modifierFlags: UInt(NSEventModifierFlags.command.rawValue + NSEventModifierFlags.shift.rawValue))
+        
+        MASShortcutMonitor.shared().register(shortcut, withAction: {
+            self.togglePopover(sender: self)
+        })
     }
-
+    
     // Termination function
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        MASShortcutMonitor.shared().unregisterAllShortcuts()
     }
     
     
