@@ -4,10 +4,10 @@ A mac menu bar app that provides note taking functionality though a quick dropdo
 ## Pods
 Please download cocoapods and run `pod install` upon cloning this directory. This will create the required Quickeys.xcworkspace file, which should be opened to edit the project.
 
-This project uses [MASShortcut](https://github.com/shpakovski/MASShortcut)
+This project uses [MASShortcut](https://github.com/shpakovski/MASShortcut).
 
 ## Project Information
-If you are looking to run or contribute to this project, you will need an ApiKeys.plist file for the pastebin functionality to work. The file should be placed in the Resources directory, and should contain a single key-value pair "API\_KEY", \<your api key here\>
+If you are looking to run or contribute to this project, you will need an ApiKeys.plist file for the pastebin functionality to work. The file should be placed in the Resources directory, and should contain a single key-value pair "API\_KEY", \<your api key here\>.
 
 ## License
 This project is licensed under the BSD-3-Clause.
