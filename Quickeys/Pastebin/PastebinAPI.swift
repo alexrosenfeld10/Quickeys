@@ -13,7 +13,7 @@ import AVFoundation
 class PastebinAPI {
     
     var API_KEY = ""
-    var player: AVAudioPlayer?
+    static var player = AVAudioPlayer()
     
     init() {
         API_KEY = valueForAPIKey(named: "API_KEY")
@@ -29,7 +29,6 @@ class PastebinAPI {
     }
     
     func postPasteRequest(urlEscapedContent: String) {
-        
         var request = URLRequest(url: URL(string: "http://pastebin.com/api/api_post.php")!)
         request.httpMethod = "POST"
         let postString = "api_paste_code=\(urlEscapedContent)&api_dev_key=\(API_KEY)&api_option=paste&api_paste_private=1&api_paste_expire_date=N"
@@ -56,21 +55,21 @@ class PastebinAPI {
                     pasteBoard.clearContents()
                     pasteBoard.setString(responseString!, forType: NSStringPboardType)
                 } else if (responseString?.contains("maximum"))! {
-                    self.playFunkSound()
+                    PastebinAPI.playFunkSound()
                     NSLog(responseString!)
                 } else {
-                    self.playFunkSound()
+                    PastebinAPI.playFunkSound()
                     NSLog(responseString!)
                 }
             }
             task.resume()
         } else {
             NSLog("No internet connection")
-            playFunkSound()
+            PastebinAPI.playFunkSound()
         }
     }
     
-    func playFunkSound() {
+    class func playFunkSound() {
         guard let url = Bundle.main.url(forResource: "Funk", withExtension: "aiff")
             else {
                 NSLog("Unable to find Funk.aiff")
@@ -79,8 +78,8 @@ class PastebinAPI {
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            player!.prepareToPlay()
-            player!.play()
+            player.prepareToPlay()
+            player.play()
         } catch let error {
             NSLog(error.localizedDescription)
         }

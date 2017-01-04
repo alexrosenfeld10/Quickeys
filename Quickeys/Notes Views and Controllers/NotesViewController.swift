@@ -156,6 +156,11 @@ extension NotesViewController {
     }
     
     @IBAction func pastebinClicked(_ sender: AnyObject) {
-        pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: getHighlightedOrAllTextFromView()))
+        let text = getHighlightedOrAllTextFromView()
+        if !text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).isEmpty {
+            pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text))
+        } else {
+            PastebinAPI.playFunkSound()
+        }
     }
 }
