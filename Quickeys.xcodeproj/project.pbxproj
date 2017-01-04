@@ -14,6 +14,8 @@
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
 		EB2959AC1E04F19B00F7B045 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9131E04ED1600C28385 /* ApiKeys.plist */; };
+		EB7944401E1D9D2000851B62 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB79443F1E1D9D2000851B62 /* Urls.plist */; };
+		EB7944421E1D9F5D00851B62 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7944411E1D9F5D00851B62 /* Utility.swift */; };
 		EBDFA90B1E04ECF700C28385 /* PastebinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */; };
 		EBDFA90C1E04ECF700C28385 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90A1E04ECF700C28385 /* Reachability.swift */; };
 		EBDFA9101E04ED0A00C28385 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */; };
@@ -34,6 +36,8 @@
 		EB2792691DFDC07D00B92AFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB3A46F91E19D04300812099 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Quickeys/Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB79443F1E1D9D2000851B62 /* Urls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Urls.plist; path = Quickeys/Resources/Urls.plist; sourceTree = SOURCE_ROOT; };
+		EB7944411E1D9F5D00851B62 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Quickeys/Utility.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastebinAPI.swift; path = Quickeys/Pastebin/PastebinAPI.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA90A1E04ECF700C28385 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Quickeys/Pastebin/Reachability.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTextViewController.swift; path = "Quickeys/Notes Views and Controllers/NotesTextViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -91,6 +95,7 @@
 				EBDFA9141E04ED1600C28385 /* Assets.xcassets */,
 				EBDFA9151E04ED1600C28385 /* Funk.aiff */,
 				EBDFA9161E04ED1600C28385 /* Info.plist */,
+				EB79443F1E1D9D2000851B62 /* Urls.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */,
 				EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */,
 				EB3A46F91E19D04300812099 /* Bridging-Header.h */,
+				EB7944411E1D9F5D00851B62 /* Utility.swift */,
 				EBDFA8FA1E04DAF900C28385 /* Pastebin */,
 				EB16DA761E03474500CB7883 /* Notes Views and Controllers */,
 				EB16DA771E03488A00CB7883 /* Resources */,
@@ -203,6 +209,7 @@
 			files = (
 				EB2959AC1E04F19B00F7B045 /* ApiKeys.plist in Resources */,
 				EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */,
+				EB7944401E1D9D2000851B62 /* Urls.plist in Resources */,
 				EBDFA9181E04ED1600C28385 /* Assets.xcassets in Resources */,
 				EBDFA9121E04ED0A00C28385 /* NotesViewController.xib in Resources */,
 				EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */,
@@ -266,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7944421E1D9F5D00851B62 /* Utility.swift in Sources */,
 				EBDFA9101E04ED0A00C28385 /* NotesTextViewController.swift in Sources */,
 				EBDFA9111E04ED0A00C28385 /* NotesViewController.swift in Sources */,
 				EBDFA90B1E04ECF700C28385 /* PastebinAPI.swift in Sources */,

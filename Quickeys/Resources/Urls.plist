@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Google</key>
+	<string>https://www.google.com/search?q=</string>
+	<key>Wolfram Alpha</key>
+	<string>https://www.wolframalpha.com/input/?i=</string>
+	<key>Youtube</key>
+	<string>https://www.youtube.com/results?search_query=</string>
+	<key>Google Maps</key>
+	<string>https://www.google.com/maps/search/</string>
+</dict>
+</plist>

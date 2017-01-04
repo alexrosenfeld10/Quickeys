@@ -8,25 +8,16 @@
 
 import Foundation
 import Cocoa
-import AVFoundation
 
 class PastebinAPI {
     
     var API_KEY = ""
-    static var player = AVAudioPlayer()
     
     init() {
-        API_KEY = valueForAPIKey(named: "API_KEY")
+        API_KEY = Utility.valueForKey(from: "ApiKeys", named: "API_KEY")!
     }
     
     let url = NSURL(string: "http://pastebin.com/api/api_post.php")
-    
-    func valueForAPIKey(named keyname:String) -> String {
-        let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
-        let plist = NSDictionary(contentsOfFile:filePath!)
-        let value = plist?.object(forKey: keyname) as! String
-        return value
-    }
     
     func postPasteRequest(urlEscapedContent: String) {
         var request = URLRequest(url: URL(string: "http://pastebin.com/api/api_post.php")!)
@@ -55,33 +46,17 @@ class PastebinAPI {
                     pasteBoard.clearContents()
                     pasteBoard.setString(responseString!, forType: NSStringPboardType)
                 } else if (responseString?.contains("maximum"))! {
-                    PastebinAPI.playFunkSound()
+                    Utility.playFunkSound()
                     NSLog(responseString!)
                 } else {
-                    PastebinAPI.playFunkSound()
+                    Utility.playFunkSound()
                     NSLog(responseString!)
                 }
             }
             task.resume()
         } else {
             NSLog("No internet connection")
-            PastebinAPI.playFunkSound()
-        }
-    }
-    
-    class func playFunkSound() {
-        guard let url = Bundle.main.url(forResource: "Funk", withExtension: "aiff")
-            else {
-                NSLog("Unable to find Funk.aiff")
-                return
-        }
-        
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player.prepareToPlay()
-            player.play()
-        } catch let error {
-            NSLog(error.localizedDescription)
+            Utility.playFunkSound()
         }
     }
 }

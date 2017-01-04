@@ -22,18 +22,6 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     let MIN_HEIGHT = CGFloat(169)
     let MAX_HEIGHT = CGFloat(500)
     
-    let GOOGLE_TITLE = "Google"
-    let GOOGLE_URL = "https://www.google.com/search?q="
-    
-    let WOLFRAM_TITLE = "Wolfram Alpha"
-    let WOLFRAM_URL = "https://www.wolframalpha.com/input/?i="
-    
-    let GOOGLEMAPS_TITLE = "Google Maps"
-    let GOOGLEMAPS_URL = "https://www.google.com/maps/search/"
-    
-    let YOUTUBE_TITLE = "Youtube"
-    let YOUTUBE_URL = "https://www.youtube.com/results?search_query="
-    
     // Outlets
     
     @IBOutlet var inputText: NotesTextViewController!
@@ -113,31 +101,17 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     func searchTextOnWebsite(website: String) {
         // Set our destination url
-        var BASE_URL = ""
-        switch website {
-        case GOOGLE_TITLE:
-            BASE_URL = GOOGLE_URL
-            break
-        case WOLFRAM_TITLE:
-            BASE_URL = WOLFRAM_URL
-            break
-        case GOOGLEMAPS_TITLE:
-            BASE_URL = GOOGLEMAPS_URL
-            break
-        case YOUTUBE_TITLE:
-            BASE_URL = YOUTUBE_URL
-            break
-        default:
-            NSLog("Unknown website string: " + website)
-            return
-        }
-        
-        let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
-        
-        if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
-            NSLog("browser opened successfully")
+        if let BASE_URL = Utility.valueForKey(from: "Urls", named: website){
+            
+            let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
+            
+            if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
+                NSLog("browser opened successfully")
+            } else {
+                NSLog("browser failed to open")
+            }
         } else {
-            NSLog("browser failed to open")
+            NSLog("No website named " + website + "in the Urls.plist file")
         }
     }
 }
@@ -160,7 +134,7 @@ extension NotesViewController {
         if !text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).isEmpty {
             pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text))
         } else {
-            PastebinAPI.playFunkSound()
+            Utility.playFunkSound()
         }
     }
 }
