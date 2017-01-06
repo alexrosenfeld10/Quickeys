@@ -13,6 +13,11 @@ public class Utility {
     
     static var player = AVAudioPlayer()
     
+    class func arrayFromSource(from source: String) -> NSArray? {
+        let filePath = Bundle.main.path(forResource: source, ofType: "plist")
+        return NSArray(contentsOfFile:filePath!)
+    }
+    
     class func valueForKey(from source: String, named keyname:String) -> String? {
         let filePath = Bundle.main.path(forResource: source, ofType: "plist")
         let plist = NSDictionary(contentsOfFile:filePath!)

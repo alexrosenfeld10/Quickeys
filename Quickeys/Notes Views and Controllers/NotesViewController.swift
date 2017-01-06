@@ -27,10 +27,13 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     @IBOutlet var inputText: NotesTextViewController!
     @IBOutlet weak var searchTarget: NSPopUpButton!
     
+    @IBOutlet weak var searchWithMenu: NSMenu!
+    
     // Overrides
     
     override func awakeFromNib() {
         inputText.notesTextViewControllerDelegate = self
+        populateMenuItems()
     }
     
     override func viewDidLoad() {
@@ -101,17 +104,23 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     func searchTextOnWebsite(website: String) {
         // Set our destination url
-        if let BASE_URL = Utility.valueForKey(from: "Urls", named: website){
-            
-            let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
-            
-            if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
-                NSLog("browser opened successfully")
-            } else {
-                NSLog("browser failed to open")
-            }
+        let BASE_URL = (Utility.arrayFromSource(from: "Urls")?[searchTarget.indexOfSelectedItem] as! NSDictionary).allValues[0] as! String
+        let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
+        
+        if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
+            NSLog("browser opened successfully")
         } else {
-            NSLog("No website named " + website + "in the Urls.plist file")
+            NSLog("browser failed to open")
+        }
+    }
+    
+    func populateMenuItems() {
+        searchWithMenu.removeAllItems()
+        
+        if let menuItems = Utility.arrayFromSource(from: "Urls") {
+            for case let menuItem as NSDictionary in menuItems {
+                searchWithMenu.addItem(withTitle: menuItem.allKeys[0] as! String, action: nil, keyEquivalent: "")
+            }
         }
     }
 }
@@ -126,7 +135,11 @@ extension NotesViewController {
     }
     
     @IBAction func searchClicked(_ sender: AnyObject) {
-        searchTextOnWebsite(website: (searchTarget.selectedItem?.title)!)
+        if let target = searchTarget.selectedItem {
+            searchTextOnWebsite(website: (target.title))
+        } else {
+            NSLog("No search targets in searchTarget menu")
+        }
     }
     
     @IBAction func pastebinClicked(_ sender: AnyObject) {
