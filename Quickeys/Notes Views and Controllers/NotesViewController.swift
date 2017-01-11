@@ -26,8 +26,8 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     @IBOutlet var inputText: NotesTextViewController!
     @IBOutlet weak var searchTarget: NSPopUpButton!
-    
     @IBOutlet weak var searchWithMenu: NSMenu!
+    @IBOutlet weak var pastebinButton: NSButton!
     
     // Overrides
     
