@@ -28,6 +28,7 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     @IBOutlet weak var searchTarget: NSPopUpButton!
     @IBOutlet weak var searchWithMenu: NSMenu!
     @IBOutlet weak var pastebinButton: NSButton!
+    @IBOutlet weak var pastebinProgressIndicator: NSProgressIndicator!
     
     // Overrides
     
@@ -145,7 +146,28 @@ extension NotesViewController {
     @IBAction func pastebinClicked(_ sender: AnyObject) {
         let text = getHighlightedOrAllTextFromView()
         if !text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).isEmpty {
-            pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text))
+            
+            self.pastebinButton.title = ""
+            self.pastebinProgressIndicator.startAnimation(nil)
+            
+            pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text)) { pasteResponse in
+                DispatchQueue.main.async {
+                    self.pastebinProgressIndicator.stopAnimation(nil)
+                }
+                
+                if pasteResponse.isEmpty {
+                    self.pastebinButton.title = "Error"
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        self.pastebinButton.title = "Pastebin"
+                    })
+                    
+                } else {
+                    self.pastebinButton.title = "Copied!"
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        self.pastebinButton.title = "Pastebin"
+                    })
+                }
+            }
         } else {
             Utility.playFunkSound()
         }

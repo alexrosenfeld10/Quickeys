@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="inputText" destination="r4x-me-aTD" id="82u-6v-FUx"/>
                 <outlet property="pastebinButton" destination="J6n-eX-Tep" id="sXW-oW-7TQ"/>
+                <outlet property="pastebinProgressIndicator" destination="xnz-cg-RFv" id="UGd-Nl-kIk"/>
                 <outlet property="searchTarget" destination="zSg-cA-FgE" id="Qvn-KA-y46"/>
                 <outlet property="searchWithMenu" destination="XMB-Bk-c6g" id="Zwa-0O-eJc"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -65,7 +66,7 @@
                         <font key="font" metaFont="cellTitle"/>
                     </buttonCell>
                     <connections>
-                        <action selector="pastebinClicked:" target="-2" id="qPl-ka-Vmo"/>
+                        <action selector="pastebinClicked:" target="-2" id="IWe-A6-lkC"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-Gb-J2G">
@@ -94,6 +95,10 @@
                     <rect key="frame" x="96" y="9" width="5" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-cg-RFv">
+                    <rect key="frame" x="162" y="9" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </progressIndicator>
             </subviews>
             <point key="canvasLocation" x="67" y="117.5"/>
         </customView>

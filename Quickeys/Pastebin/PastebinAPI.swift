@@ -19,7 +19,7 @@ class PastebinAPI {
     
     let url = NSURL(string: "http://pastebin.com/api/api_post.php")
     
-    func postPasteRequest(urlEscapedContent: String) {
+    func postPasteRequest(urlEscapedContent: String, callback: @escaping (String) -> ()) {
         var request = URLRequest(url: URL(string: "http://pastebin.com/api/api_post.php")!)
         request.httpMethod = "POST"
         let postString = "api_paste_code=\(urlEscapedContent)&api_dev_key=\(API_KEY)&api_option=paste&api_paste_private=1&api_paste_expire_date=N"
@@ -45,12 +45,15 @@ class PastebinAPI {
                     NSLog(responseString!)
                     pasteBoard.clearContents()
                     pasteBoard.setString(responseString!, forType: NSStringPboardType)
+                    callback(responseString!)
                 } else if (responseString?.contains("maximum"))! {
                     Utility.playFunkSound()
                     NSLog(responseString!)
+                    callback("")
                 } else {
                     Utility.playFunkSound()
                     NSLog(responseString!)
+                    callback("")
                 }
             }
             task.resume()
