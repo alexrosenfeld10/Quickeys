@@ -2,21 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-    <dict>
-        <key>Google</key>
-        <string>https://www.google.com/search?q=</string>
-    </dict>
-    <dict>
-        <key>Wolfram Alpha</key>
-        <string>https://www.wolframalpha.com/input/?i=</string>
-    </dict>
-    <dict>
-        <key>Youtube</key>
-        <string>https://www.youtube.com/results?search_query=</string>
-    </dict>
-    <dict>
-        <key>Google Maps</key>
-        <string>https://www.google.com/maps/search/</string>
-    </dict>
+	<dict>
+		<key>Google</key>
+		<string>https://www.google.com/search?q=</string>
+		<key>isEnabled</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Wolfram Alpha</key>
+		<string>https://www.wolframalpha.com/input/?i=</string>
+		<key>isEnabled</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Youtube</key>
+		<string>https://www.youtube.com/results?search_query=</string>
+		<key>isEnabled</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Google Maps</key>
+		<string>https://www.google.com/maps/search/</string>
+		<key>isEnabled</key>
+		<true/>
+	</dict>
 </array>
 </plist>
