@@ -147,26 +147,25 @@ extension NotesViewController {
         let text = getHighlightedOrAllTextFromView()
         if !text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).isEmpty {
             
+            self.pastebinButton.isEnabled = false
             self.pastebinButton.title = ""
             self.pastebinProgressIndicator.startAnimation(nil)
             
             pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text)) { pasteResponse in
+                
                 DispatchQueue.main.async {
                     self.pastebinProgressIndicator.stopAnimation(nil)
+                    if pasteResponse.isEmpty {
+                        self.pastebinButton.title = "Error"
+                    } else {
+                        self.pastebinButton.title = "Copied!"
+                    }
                 }
                 
-                if pasteResponse.isEmpty {
-                    self.pastebinButton.title = "Error"
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                        self.pastebinButton.title = "Pastebin"
-                    })
-                    
-                } else {
-                    self.pastebinButton.title = "Copied!"
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                        self.pastebinButton.title = "Pastebin"
-                    })
-                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    self.pastebinButton.title = "Pastebin"
+                    self.pastebinButton.isEnabled = true
+                })
             }
         } else {
             Utility.playFunkSound()
