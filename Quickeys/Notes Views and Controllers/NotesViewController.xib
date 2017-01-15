@@ -3,16 +3,21 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NotesViewController" customModule="Quickeys" customModuleProvider="target">
             <connections>
                 <outlet property="inputText" destination="r4x-me-aTD" id="82u-6v-FUx"/>
+                <outlet property="notesContainer" destination="LT6-4x-1P7" id="AzG-hc-BdK"/>
                 <outlet property="pastebinButton" destination="J6n-eX-Tep" id="sXW-oW-7TQ"/>
                 <outlet property="pastebinProgressIndicator" destination="xnz-cg-RFv" id="UGd-Nl-kIk"/>
+                <outlet property="preferencesView" destination="iLE-Ux-m92" id="Yhl-st-IE7"/>
+                <outlet property="searchButton" destination="Gpz-Gb-J2G" id="iLl-ma-bHu"/>
                 <outlet property="searchTarget" destination="zSg-cA-FgE" id="Qvn-KA-y46"/>
                 <outlet property="searchWithMenu" destination="XMB-Bk-c6g" id="Zwa-0O-eJc"/>
+                <outlet property="searchWithMenuButton" destination="zSg-cA-FgE" id="MDj-of-s7y"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -39,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" importsGraphics="NO" richText="NO" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="r4x-me-aTD" customClass="NotesTextViewController" customModule="Quickeys" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="330" height="115"/>
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="115"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.8029034852981568" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="330" height="115"/>
@@ -53,7 +58,7 @@
                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="rLf-ja-sFH">
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="rLf-ja-sFH">
                         <rect key="frame" x="315" y="1" width="16" height="115"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -92,15 +97,44 @@
                     </connections>
                 </button>
                 <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-Rf-AlK">
-                    <rect key="frame" x="96" y="9" width="5" height="18"/>
+                    <rect key="frame" x="94" y="9" width="5" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-cg-RFv">
                     <rect key="frame" x="162" y="9" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </progressIndicator>
+                <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-Ux-m92">
+                    <rect key="frame" x="20" y="37" width="332" height="117"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Efy-Fx-tGE">
+                            <rect key="frame" x="0.0" y="0.0" width="332" height="117"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <view key="contentView" ambiguous="YES" id="jfN-kW-uHC">
+                                <rect key="frame" x="1" y="1" width="330" height="115"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <color key="fillColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </box>
+                    </subviews>
+                </customView>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egl-1f-DJ4">
+                    <rect key="frame" x="66" y="9" width="18" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3kn-ti-2GX">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="preferencesClicked:" target="-2" id="B3E-pB-1so"/>
+                    </connections>
+                </button>
             </subviews>
-            <point key="canvasLocation" x="67" y="117.5"/>
+            <point key="canvasLocation" x="50" y="119.5"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+    </resources>
 </document>

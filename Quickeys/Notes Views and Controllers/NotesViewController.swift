@@ -17,6 +17,7 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     let pastebinAPI = PastebinAPI()
     
     let defaults = UserDefaults.standard
+    var preferencesActive = false
     
     let FIXED_WIDTH = CGFloat(372)
     let MIN_HEIGHT = CGFloat(169)
@@ -25,8 +26,14 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     // Outlets
     
     @IBOutlet var inputText: NotesTextViewController!
+    @IBOutlet weak var preferencesView: NSView!
+    @IBOutlet weak var notesContainer: NSScrollView!
+
+    @IBOutlet weak var searchButton: NSButton!
     @IBOutlet weak var searchTarget: NSPopUpButton!
+    @IBOutlet weak var searchWithMenuButton: NSPopUpButton!
     @IBOutlet weak var searchWithMenu: NSMenu!
+    
     @IBOutlet weak var pastebinButton: NSButton!
     @IBOutlet weak var pastebinProgressIndicator: NSProgressIndicator!
     
@@ -126,6 +133,24 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
             }
         }
     }
+    
+    func togglePreferencesView() {
+        self.preferencesActive = !self.preferencesActive
+
+        if (pastebinButton.title == "Pastebin") {
+            pastebinButton.isEnabled = !pastebinButton.isEnabled
+        }
+
+        preferencesView.isHidden = !preferencesView.isHidden
+        notesContainer.isHidden = !notesContainer.isHidden
+        searchWithMenuButton.isEnabled = !searchWithMenuButton.isEnabled
+        searchButton.isEnabled = !searchButton.isEnabled
+    }
+    
+    func applyPreferences() {
+        // Get the selections from prefereces
+        populateMenuItems()
+    }
 }
 
 // Actions extension
@@ -166,11 +191,17 @@ extension NotesViewController {
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     self.pastebinButton.title = "Pastebin"
-                    self.pastebinButton.isEnabled = true
+                    if (!self.preferencesActive) {
+                        self.pastebinButton.isEnabled = true
+                    }
                 })
             }
         } else {
             Utility.playFunkSound()
         }
+    }
+    
+    @IBAction func preferencesClicked(_ sender: Any) {
+        togglePreferencesView()
     }
 }
