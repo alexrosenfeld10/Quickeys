@@ -18,6 +18,11 @@ public class Utility {
         return NSArray(contentsOfFile:filePath!)
     }
     
+    class func arrayAndPathFromSource(from source: String) -> (NSArray?, String?)? {
+        let filePath = Bundle.main.path(forResource: source, ofType: "plist")
+        return (NSArray(contentsOfFile:filePath!), filePath)
+    }
+    
     class func valueForKey(from source: String, named keyname:String) -> String? {
         let filePath = Bundle.main.path(forResource: source, ofType: "plist")
         let plist = NSDictionary(contentsOfFile:filePath!)

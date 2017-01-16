@@ -112,10 +112,9 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     func searchTextOnWebsite(website: String) {
         // Set our destination url
-        let BASE_URL = (Utility.arrayFromSource(from: "Urls")?[searchTarget.indexOfSelectedItem] as! NSDictionary).allValues[0] as! String
         let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
         
-        if let url = URL(string: BASE_URL + url_text), NSWorkspace.shared().open(url) {
+        if let url = URL(string: website + url_text), NSWorkspace.shared().open(url) {
             NSLog("browser opened successfully")
         } else {
             NSLog("browser failed to open")
@@ -123,14 +122,25 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     }
     
     func populateMenuItems() {
-        searchWithMenu.removeAllItems()
+        let lastSelectedItem = searchWithMenuButton.selectedItem
         
+        searchWithMenu.removeAllItems()
         if let menuItems = Utility.arrayFromSource(from: "Urls") {
             for case let menuItem as NSDictionary in menuItems {
                 if (menuItem.value(forKey: "isEnabled") as! Bool) {
-                    searchWithMenu.addItem(withTitle: menuItem.allKeys[0] as! String, action: nil, keyEquivalent: "")
+                    let newItem = NSMenuItem(title: menuItem.allKeys[0] as! String, action: nil, keyEquivalent: "")
+                    newItem.representedObject = menuItem.allValues[0] as! String
+                    
+                    searchWithMenu.addItem(newItem)
                 }
             }
+        }
+        
+        if let title = lastSelectedItem?.title, searchWithMenuButton.itemTitles.contains(title) {
+            searchWithMenuButton.selectItem(withTitle: title)
+        }
+        else {
+            searchWithMenuButton.selectItem(at: 0)
         }
     }
     
@@ -148,7 +158,18 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     }
     
     func applyPreferences() {
-        // Get the selections from prefereces
+        // Apply selections to plist file
+        if let (menuItems, filePath) = Utility.arrayAndPathFromSource(from: "Urls") {
+            for case let menuItem as NSDictionary in menuItems! {
+                // Loop through check boxes in preference list
+                /* if (menuItem.allKeys[0] as! String == checkboxes.title) {
+                    menuItem.setValue(checkbox.state == NSOnState, forKey: "isEnabled")
+                }
+                */
+            }
+            menuItems?.write(toFile: filePath!, atomically: true)
+        }
+        
         populateMenuItems()
     }
 }
@@ -164,7 +185,7 @@ extension NotesViewController {
     
     @IBAction func searchClicked(_ sender: AnyObject) {
         if let target = searchTarget.selectedItem {
-            searchTextOnWebsite(website: (target.title))
+            searchTextOnWebsite(website: (target.representedObject as! String))
         } else {
             NSLog("No search targets in searchTarget menu")
         }
@@ -202,6 +223,9 @@ extension NotesViewController {
     }
     
     @IBAction func preferencesClicked(_ sender: Any) {
+        if (self.preferencesActive) {
+            applyPreferences()
+        }
         togglePreferencesView()
     }
 }
