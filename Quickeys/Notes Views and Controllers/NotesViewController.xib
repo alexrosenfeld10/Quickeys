@@ -9,8 +9,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NotesViewController" customModule="Quickeys" customModuleProvider="target">
             <connections>
-                <outlet property="inputText" destination="r4x-me-aTD" id="82u-6v-FUx"/>
-                <outlet property="notesContainer" destination="LT6-4x-1P7" id="AzG-hc-BdK"/>
+                <outlet property="inputText" destination="cLQ-gL-A0W" id="Qpf-lt-mOZ"/>
+                <outlet property="notesContainer" destination="44y-Fg-cpA" id="Z4a-TB-PcY"/>
                 <outlet property="pastebinButton" destination="J6n-eX-Tep" id="sXW-oW-7TQ"/>
                 <outlet property="pastebinProgressIndicator" destination="xnz-cg-RFv" id="UGd-Nl-kIk"/>
                 <outlet property="preferencesView" destination="iLE-Ux-m92" id="Yhl-st-IE7"/>
@@ -27,45 +27,49 @@
             <rect key="frame" x="0.0" y="0.0" width="372" height="169"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-cA-FgE" userLabel="Search with">
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-cA-FgE" userLabel="Search with">
                     <rect key="frame" x="275" y="8" width="77" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="77" id="U1y-al-4H2"/>
+                    </constraints>
                     <popUpButtonCell key="cell" type="roundRect" bezelStyle="roundedRect" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iJM-fo-oJl" userLabel="Search with">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
                         <menu key="menu" id="XMB-Bk-c6g"/>
                     </popUpButtonCell>
                 </popUpButton>
-                <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-4x-1P7" userLabel="Notes">
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44y-Fg-cpA">
                     <rect key="frame" x="20" y="37" width="332" height="117"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <clipView key="contentView" ambiguous="YES" id="UYL-o9-BH9">
+                    <clipView key="contentView" id="FVg-7A-qTW">
                         <rect key="frame" x="1" y="1" width="330" height="115"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" richText="NO" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="r4x-me-aTD" customClass="NotesTextViewController" customModule="Quickeys" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="332" height="115"/>
+                            <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="cLQ-gL-A0W" customClass="NotesTextViewController" customModule="Quickeys" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-1" width="330" height="115"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.8029034852981568" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="330" height="115"/>
-                                <size key="maxSize" width="534" height="10000000"/>
+                                <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="j2b-DE-ejP">
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="cBh-w8-a4u">
                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="rLf-ja-sFH">
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="yeK-vu-fmU">
                         <rect key="frame" x="315" y="1" width="16" height="115"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-eX-Tep">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-eX-Tep">
                     <rect key="frame" x="139" y="8" width="63" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="MOw-L3-WzW"/>
+                        <constraint firstAttribute="width" constant="63" id="Z2q-2I-RKX"/>
+                    </constraints>
                     <buttonCell key="cell" type="roundRect" title="Pastebin" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3W3-XQ-cbH">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -74,9 +78,8 @@
                         <action selector="pastebinClicked:" target="-2" id="IWe-A6-lkC"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-Gb-J2G">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-Gb-J2G">
                     <rect key="frame" x="210" y="8" width="57" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="roundRect" title="Search:" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zN8-Mr-f9O">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -85,9 +88,8 @@
                         <action selector="searchClicked:" target="-2" id="teh-Vi-Beb"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-fT-E51">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-fT-E51">
                     <rect key="frame" x="20" y="8" width="38" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="roundRect" title="Quit" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6x2-Qf-ffl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -96,17 +98,18 @@
                         <action selector="quit:" target="-2" id="mmV-yx-9cO"/>
                     </connections>
                 </button>
-                <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-Rf-AlK">
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-Rf-AlK">
                     <rect key="frame" x="94" y="9" width="5" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
-                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-cg-RFv">
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-cg-RFv">
                     <rect key="frame" x="162" y="9" width="16" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="gS9-LV-Shg"/>
+                        <constraint firstAttribute="width" constant="16" id="kEL-VX-GXG"/>
+                    </constraints>
                 </progressIndicator>
-                <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-Ux-m92">
+                <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-Ux-m92">
                     <rect key="frame" x="20" y="37" width="332" height="117"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Efy-Fx-tGE">
                             <rect key="frame" x="0.0" y="0.0" width="332" height="117"/>
@@ -119,9 +122,11 @@
                         </box>
                     </subviews>
                 </customView>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egl-1f-DJ4">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="egl-1f-DJ4">
                     <rect key="frame" x="66" y="9" width="18" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="Uo6-0m-u7z"/>
+                    </constraints>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3kn-ti-2GX">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -131,6 +136,32 @@
                     </connections>
                 </button>
             </subviews>
+            <constraints>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="centerX" secondItem="xnz-cg-RFv" secondAttribute="centerX" id="2FG-Yq-2S3"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="bottom" secondItem="egl-1f-DJ4" secondAttribute="bottom" id="6te-RY-XT4"/>
+                <constraint firstItem="zSg-cA-FgE" firstAttribute="trailing" secondItem="44y-Fg-cpA" secondAttribute="trailing" id="9fi-Ai-l59"/>
+                <constraint firstItem="zSg-cA-FgE" firstAttribute="trailing" secondItem="iLE-Ux-m92" secondAttribute="trailing" id="AuD-P1-IH5"/>
+                <constraint firstAttribute="bottom" secondItem="J6n-eX-Tep" secondAttribute="bottom" constant="9" id="HHf-yA-c9Q"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="top" secondItem="PDb-Rf-AlK" secondAttribute="top" id="HsN-rf-R14"/>
+                <constraint firstItem="PDb-Rf-AlK" firstAttribute="leading" secondItem="egl-1f-DJ4" secondAttribute="trailing" constant="12" id="JNe-QV-b9f"/>
+                <constraint firstItem="44y-Fg-cpA" firstAttribute="leading" secondItem="iLE-Ux-m92" secondAttribute="leading" id="Lwt-gW-ZFd"/>
+                <constraint firstItem="Gpz-Gb-J2G" firstAttribute="leading" secondItem="J6n-eX-Tep" secondAttribute="trailing" constant="8" symbolic="YES" id="O90-Sp-CFv"/>
+                <constraint firstItem="zSg-cA-FgE" firstAttribute="leading" secondItem="Gpz-Gb-J2G" secondAttribute="trailing" constant="8" symbolic="YES" id="QSM-NE-20y"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="139" id="U73-pU-7yY"/>
+                <constraint firstItem="egl-1f-DJ4" firstAttribute="leading" secondItem="KCw-fT-E51" secondAttribute="trailing" constant="8" symbolic="YES" id="Uwq-f1-EvG"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="leading" secondItem="PDb-Rf-AlK" secondAttribute="trailing" constant="42" id="Wfq-9B-xli"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="top" secondItem="iLE-Ux-m92" secondAttribute="bottom" constant="10" id="YPW-2h-pX1"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="baseline" secondItem="KCw-fT-E51" secondAttribute="baseline" id="b6p-J5-Bwv"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="bottom" secondItem="xnz-cg-RFv" secondAttribute="bottom" id="btx-qy-Lsz"/>
+                <constraint firstItem="44y-Fg-cpA" firstAttribute="top" secondItem="iLE-Ux-m92" secondAttribute="top" id="eFZ-3V-VYw"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="top" secondItem="egl-1f-DJ4" secondAttribute="top" id="gYP-Jg-POG"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="bottom" secondItem="PDb-Rf-AlK" secondAttribute="bottom" id="gsJ-of-s1w"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="top" secondItem="zSg-cA-FgE" secondAttribute="top" id="iyn-LO-iQs"/>
+                <constraint firstItem="44y-Fg-cpA" firstAttribute="bottom" secondItem="iLE-Ux-m92" secondAttribute="bottom" id="oek-ag-X75"/>
+                <constraint firstItem="44y-Fg-cpA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="syj-w3-xZR"/>
+                <constraint firstItem="J6n-eX-Tep" firstAttribute="baseline" secondItem="Gpz-Gb-J2G" secondAttribute="baseline" id="wGW-qx-h7f"/>
+                <constraint firstItem="44y-Fg-cpA" firstAttribute="leading" secondItem="KCw-fT-E51" secondAttribute="leading" id="xDO-vI-XTP"/>
+            </constraints>
             <point key="canvasLocation" x="50" y="119.5"/>
         </customView>
     </objects>

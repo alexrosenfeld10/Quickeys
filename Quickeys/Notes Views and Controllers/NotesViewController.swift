@@ -42,6 +42,8 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     override func awakeFromNib() {
         inputText.notesTextViewControllerDelegate = self
         populateMenuItems()
+        self.notesContainer.horizontalScrollElasticity = .none
+        self.notesContainer.hasHorizontalScroller = false
     }
     
     override func viewDidLoad() {
