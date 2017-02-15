@@ -1,5 +1,5 @@
 # Quickeys
-A mac menu bar app that provides note taking functionality though a quick dropdown menu.
+A mac menu bar app that provides note taking functionality through a quick dropdown menu.
 
 ## Pods
 Please download cocoapods and run `pod install` upon cloning this directory. This will create the required Quickeys.xcworkspace file, which should be opened to edit the project.
