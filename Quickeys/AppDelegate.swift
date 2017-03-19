@@ -20,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
+        NSApp.activate(ignoringOtherApps: true)
+        
         if let button = statusItem.button {
             button.image = NSImage(named: "statusIcon")
             button.image?.isTemplate = true // best for dark mode
@@ -29,7 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.highlightMode = false
         
         popover.contentViewController = NotesViewController(nibName: "NotesViewController", bundle: nil)
-        
+        popover.behavior = .transient
+
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
             if self.popover.isShown {
                 self.closePopover(sender: event)
