@@ -64,8 +64,8 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     }
     
     override func mouseDragged(with theEvent: NSEvent) {
-        let currentLocation = NSEvent.mouseLocation()
-        let screenFrame = NSScreen.main()?.frame
+        let currentLocation = NSEvent.mouseLocation
+        let screenFrame = NSScreen.main?.frame
         
         var newY = screenFrame!.size.height - currentLocation.y
         
@@ -77,7 +77,7 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
             newY = MAX_HEIGHT
         }
         
-        let appDelegate : AppDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate : AppDelegate = NSApplication.shared.delegate as! AppDelegate
         appDelegate.popover.contentSize = NSSize(width: FIXED_WIDTH, height: newY)
     }
     
@@ -116,7 +116,7 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
         // Set our destination url
         let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
         
-        if let url = URL(string: website + url_text), NSWorkspace.shared().open(url) {
+        if let url = URL(string: website + url_text), NSWorkspace.shared.open(url) {
             NSLog("browser opened successfully")
         } else {
             NSLog("browser failed to open")
@@ -182,7 +182,7 @@ extension NotesViewController {
     // Actions
     
     @IBAction func quit(_ sender: NSButton) {
-        NSApplication.shared().terminate(sender)
+        NSApplication.shared.terminate(sender)
     }
     
     @IBAction func searchClicked(_ sender: AnyObject) {

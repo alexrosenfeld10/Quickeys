@@ -28,22 +28,22 @@ class PastebinAPI {
             guard let data = data, error == nil
                 // check for fundamental networking error
                 else {
-                    NSLog("error=\(error)")
+                    NSLog("error=\(String(describing: error))")
                     return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
                 NSLog("statusCode should be 200, but is \(httpStatus.statusCode)")
-                NSLog("response = \(response)")
+                NSLog("response = \(String(describing: response))")
             }
             
             let responseString = String(data: data, encoding: .utf8)
             
-            let pasteBoard = NSPasteboard.general()
+            let pasteBoard = NSPasteboard.general
             if (responseString?.contains("pastebin.com"))! {
                 NSLog(responseString!)
                 pasteBoard.clearContents()
-                pasteBoard.setString(responseString!, forType: NSStringPboardType)
+                pasteBoard.setString(responseString!, forType: NSPasteboard.PasteboardType.string)
                 callback(responseString!)
             } else if (responseString?.contains("maximum"))! {
                 Utility.playFunkSound()

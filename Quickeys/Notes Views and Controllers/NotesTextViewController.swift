@@ -15,7 +15,7 @@ protocol NotesTextViewControllerDelegate {
 
 class NotesTextViewController: NSTextView {
     
-    let appDelegate = NSApplication.shared().delegate as! AppDelegate
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
     var notesTextViewControllerDelegate: NotesTextViewControllerDelegate?
     
     override func awakeFromNib() {
@@ -25,10 +25,10 @@ class NotesTextViewController: NSTextView {
     override open func keyDown(with event: NSEvent) {
         if (event.keyCode == 53){
             appDelegate.togglePopover(sender: nil)
-        } else if (event.keyCode == 36 && event.modifierFlags.contains(.command)) {
+        } else if (event.keyCode == 36 && event.modifierFlags.contains(NSEvent.ModifierFlags.command)) {
             NSLog("Command enter pressed")
             self.notesTextViewControllerDelegate?.NotesTextViewiewControllerCommandEnterPressed()
-        } else if (event.keyCode == 36 && event.modifierFlags.contains(.option)) {
+        } else if (event.keyCode == 36 && event.modifierFlags.contains(NSEvent.ModifierFlags.option)) {
             NSLog("alt/option enter pressed")
             self.notesTextViewControllerDelegate?.NotesTextViewiewControllerAltOptionEnterPressed()
         } else {

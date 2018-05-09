@@ -11,7 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let popover = NSPopover()
     
     var eventMonitor: EventMonitor?
@@ -23,24 +23,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
         
         if let button = statusItem.button {
-            button.image = NSImage(named: "statusIcon")
+            button.image = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
             button.image?.isTemplate = true // best for dark mode
             button.action = #selector(AppDelegate.togglePopover(sender:))
         }
         
         statusItem.highlightMode = false
         
-        popover.contentViewController = NotesViewController(nibName: "NotesViewController", bundle: nil)
+        popover.contentViewController = NotesViewController(nibName: NSNib.Name(rawValue: "NotesViewController"), bundle: nil)
         popover.behavior = .transient
 
-        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
+        eventMonitor = EventMonitor(mask: [NSEvent.EventTypeMask.leftMouseDown, NSEvent.EventTypeMask.rightMouseDown]) { [unowned self] event in
             if self.popover.isShown {
                 self.closePopover(sender: event)
             }
         }
         eventMonitor?.start()
         
-        let shortcut = MASShortcut.init(keyCode: UInt(kVK_ANSI_8), modifierFlags: UInt(NSEventModifierFlags.command.rawValue + NSEventModifierFlags.shift.rawValue))
+        let shortcut = MASShortcut.init(keyCode: UInt(kVK_ANSI_8), modifierFlags: UInt(NSEvent.ModifierFlags.command.rawValue + NSEvent.ModifierFlags.shift.rawValue))
         
         MASShortcutMonitor.shared().register(shortcut, withAction: {
             self.togglePopover(sender: self)
@@ -56,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // Helper functions
     
-    func togglePopover(sender: AnyObject?) {
+    @objc func togglePopover(sender: AnyObject?) {
         if popover.isShown {
             closePopover(sender: sender)
         } else {
