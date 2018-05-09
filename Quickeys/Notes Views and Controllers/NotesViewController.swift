@@ -28,7 +28,7 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     @IBOutlet var inputText: NotesTextViewController!
     @IBOutlet weak var preferencesView: NSView!
     @IBOutlet weak var notesContainer: NSScrollView!
-
+    
     @IBOutlet weak var searchButton: NSButton!
     @IBOutlet weak var searchTarget: NSPopUpButton!
     @IBOutlet weak var searchWithMenuButton: NSPopUpButton!
@@ -148,11 +148,11 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     func togglePreferencesView() {
         self.preferencesActive = !self.preferencesActive
-
+        
         if (pastebinButton.title == "Pastebin") {
             pastebinButton.isEnabled = !pastebinButton.isEnabled
         }
-
+        
         preferencesView.isHidden = !preferencesView.isHidden
         notesContainer.isHidden = !notesContainer.isHidden
         searchWithMenuButton.isEnabled = !searchWithMenuButton.isEnabled
@@ -165,9 +165,9 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
             for case let menuItem as NSDictionary in menuItems! {
                 // Loop through check boxes in preference list
                 /* if (menuItem.allKeys[0] as! String == checkboxes.title) {
-                    menuItem.setValue(checkbox.state == NSOnState, forKey: "isEnabled")
-                }
-                */
+                 menuItem.setValue(checkbox.state == NSOnState, forKey: "isEnabled")
+                 }
+                 */
             }
             menuItems?.write(toFile: filePath!, atomically: true)
         }
@@ -194,32 +194,37 @@ extension NotesViewController {
     }
     
     @IBAction func pastebinClicked(_ sender: AnyObject) {
-        let text = getHighlightedOrAllTextFromView()
-        if !text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).isEmpty {
-            
-            self.pastebinButton.isEnabled = false
-            self.pastebinButton.title = ""
-            self.pastebinProgressIndicator.startAnimation(nil)
-            
-            pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text)) { pasteResponse in
+        if Reachability.isInternetAvailable() {
+            let text = getHighlightedOrAllTextFromView()
+            if !text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).isEmpty {
                 
-                DispatchQueue.main.async {
-                    self.pastebinProgressIndicator.stopAnimation(nil)
-                    if pasteResponse.isEmpty {
-                        self.pastebinButton.title = "Error"
-                    } else {
-                        self.pastebinButton.title = "Copied!"
+                self.pastebinButton.isEnabled = false
+                self.pastebinButton.title = ""
+                self.pastebinProgressIndicator.startAnimation(nil)
+                
+                pastebinAPI.postPasteRequest(urlEscapedContent: urlEscapeText(txt: text)) { pasteResponse in
+                    
+                    DispatchQueue.main.async {
+                        self.pastebinProgressIndicator.stopAnimation(nil)
+                        if pasteResponse.isEmpty {
+                            self.pastebinButton.title = "Error"
+                        } else {
+                            self.pastebinButton.title = "Copied!"
+                        }
                     }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        self.pastebinButton.title = "Pastebin"
+                        if (!self.preferencesActive) {
+                            self.pastebinButton.isEnabled = true
+                        }
+                    })
                 }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                    self.pastebinButton.title = "Pastebin"
-                    if (!self.preferencesActive) {
-                        self.pastebinButton.isEnabled = true
-                    }
-                })
+            } else {
+                Utility.playFunkSound()
             }
         } else {
+            NSLog("No internet connection")
             Utility.playFunkSound()
         }
     }
