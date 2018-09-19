@@ -1,6 +1,8 @@
 # Quickeys
 A mac menu bar app that provides note taking and other functionality through a quick dropdown window. Please download the most recent release and drag the zip file to your Applications folder. From there, double click the zip file to unpack the application. After doing so, you may delete the zip file.
 
+![Quickeys Screenshot](Images/Quickeys.png)
+
 ## Features
 Quickeys has a variety of smaller hidden features:
 
