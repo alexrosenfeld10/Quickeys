@@ -6,7 +6,7 @@ Quickeys has a variety of smaller hidden features:
 
 * Press `cmd + shift + 8` to toggle the Quickeys window from anywhere on your computer
 * Press `cmd+enter` to search highlighted or all text on target
-* Press `alt/option + enter` to generate and copy a [pastebin](http://pastebin.com/) link of highlighted or all text
+* Press `ctrl + alt/option + enter` to generate and copy a [pastebin](http://pastebin.com/) link of highlighted or all text
 * Click and drag anywhere outside of the text box and buttons to resize the window vertically
 * Autosaves your notes so they do not get lost if you quit the app.
 
