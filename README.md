@@ -1,6 +1,15 @@
 # Quickeys
 A mac menu bar app that provides note taking and other functionality through a quick dropdown window. Please download the most recent release and drag the zip file to your Applications folder. From there, double click the zip file to unpack the application. After doing so, you may delete the zip file.
 
+## Building and running
+
+1. Install `cocoapods` if you do not have it already. `sudo gem install cocoapods`
+2. Run `pod install` in the root of the cloned repository.
+3. Open the `Quickeys.xcproj` file in Xcode.
+4. Click the Play button (build and run the current scheme) in Xcode
+
+Quickeys should now be running!
+
 ## Features
 Quickeys has a variety of smaller hidden features:
 
