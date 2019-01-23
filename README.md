@@ -10,6 +10,8 @@ A mac menu bar app that provides note taking and other functionality through a q
 
 Quickeys should now be running!
 
+![Quickeys Screenshot](Images/Quickeys.png)
+
 ## Features
 Quickeys has a variety of smaller hidden features:
 
