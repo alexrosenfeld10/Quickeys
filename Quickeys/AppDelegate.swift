@@ -23,14 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
         
         if let button = statusItem.button {
-            button.image = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
+            button.image = NSImage(named: "statusIcon")
             button.image?.isTemplate = true // best for dark mode
             button.action = #selector(AppDelegate.togglePopover(sender:))
         }
         
         statusItem.highlightMode = false
         
-        popover.contentViewController = NotesViewController(nibName: NSNib.Name(rawValue: "NotesViewController"), bundle: nil)
+        popover.contentViewController = NotesViewController(nibName: "NotesViewController", bundle: nil)
         popover.behavior = .transient
 
         eventMonitor = EventMonitor(mask: [NSEvent.EventTypeMask.leftMouseDown, NSEvent.EventTypeMask.rightMouseDown]) { [unowned self] event in
