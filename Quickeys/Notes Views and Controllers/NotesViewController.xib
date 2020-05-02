@@ -120,8 +120,43 @@
                                 <rect key="frame" x="3" y="3" width="332" height="103"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="TG7-EU-0ZD">
+                                        <rect key="frame" x="116" y="0.0" width="5" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </box>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eii-Yi-wie">
+                                        <rect key="frame" x="187" y="87" width="54" height="16"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Hotkeys" id="En2-zz-2Xb">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpP-Bf-uvP">
+                                        <rect key="frame" x="27" y="87" width="77" height="16"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Preferences" id="5l2-13-KEV">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ht-Yn-dFg">
+                                        <rect key="frame" x="127" y="10" width="198" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" id="nHL-5W-CSF">
+                                            <font key="font" metaFont="system"/>
+                                            <string key="title">Click and drag to resize
+
+Open / Close: ⌘ ⇧ 8
+Seach (from editor): ⌥ ⏎</string>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL3-6j-k9f">
-                                        <rect key="frame" x="119" y="43" width="94" height="18"/>
+                                        <rect key="frame" x="18" y="63" width="94" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="check" title="Run at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Mrm-yD-zAz">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
