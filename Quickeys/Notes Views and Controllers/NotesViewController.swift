@@ -55,6 +55,8 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
         {
             inputText.insertText(savedUserInputTextData, replacementRange: inputText.rangeForUserTextChange)
         }
+        
+        runAtLoginButton.state = LaunchAtLogin.isEnabled ? .on : .off
     }
     
     override func viewDidDisappear() {
