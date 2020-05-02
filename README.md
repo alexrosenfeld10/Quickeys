@@ -41,7 +41,7 @@ If you are looking to run or contribute to this project, you will need an ApiKey
 This project uses [MASShortcut](https://github.com/shpakovski/MASShortcut).
 
 ### Carthage
-This project uses [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin)
+This project uses [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin).
 
 ## License
 This project is licensed under the BSD-3-Clause.
