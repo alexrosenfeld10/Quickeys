@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import LaunchAtLogin
 
 // Notes View Controller class
 
@@ -36,6 +37,8 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     @IBOutlet weak var pastebinButton: NSButton!
     @IBOutlet weak var pastebinProgressIndicator: NSProgressIndicator!
+    
+    @IBOutlet weak var runAtLoginButton: NSButton!
     
     // Overrides
     
@@ -163,22 +166,6 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
         searchWithMenuButton.isEnabled = !searchWithMenuButton.isEnabled
         searchButton.isEnabled = !searchButton.isEnabled
     }
-    
-    func applyPreferences() {
-        // Apply selections to plist file
-        if let (menuItems, filePath) = Utility.arrayAndPathFromSource(from: "Urls") {
-            for case let menuItem as NSDictionary in menuItems! {
-                // Loop through check boxes in preference list
-                /* if (menuItem.allKeys[0] as! String == checkboxes.title) {
-                 menuItem.setValue(checkbox.state == NSOnState, forKey: "isEnabled")
-                 }
-                 */
-            }
-            menuItems?.write(toFile: filePath!, atomically: true)
-        }
-        
-        populateMenuItems()
-    }
 }
 
 // Actions extension
@@ -235,9 +222,10 @@ extension NotesViewController {
     }
     
     @IBAction func preferencesClicked(_ sender: Any) {
-        if (self.preferencesActive) {
-            applyPreferences()
-        }
         togglePreferencesView()
+    }
+    
+    @IBAction func runAtLoginClicked(_ sender: Any) {
+        LaunchAtLogin.isEnabled = runAtLoginButton.state.rawValue == 1
     }
 }

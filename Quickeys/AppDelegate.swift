@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import LaunchAtLogin
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -20,7 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Launch function
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        LaunchAtLogin.isEnabled = true
         NSApp.activate(ignoringOtherApps: true)
         
         if let button = statusItem.button {
