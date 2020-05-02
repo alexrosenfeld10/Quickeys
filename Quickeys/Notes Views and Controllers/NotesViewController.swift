@@ -130,8 +130,13 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
         if let menuItems = Utility.arrayFromSource(from: "Urls") {
             for case let menuItem as NSDictionary in menuItems {
                 if (menuItem.value(forKey: "isEnabled") as! Bool) {
-                    let newItem = NSMenuItem(title: menuItem.allKeys[0] as! String, action: nil, keyEquivalent: "")
-                    newItem.representedObject = menuItem.allValues[0] as! String
+                    let title = menuItem.value(forKey: "site") as! String
+                    let newItem = NSMenuItem(
+                        title: title,
+                        action: nil,
+                        keyEquivalent: "")
+
+                    newItem.representedObject = menuItem.value(forKey: "url")
                     
                     searchWithMenu.addItem(newItem)
                 }

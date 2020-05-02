@@ -3,25 +3,33 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Google</key>
+		<key>site</key>
+		<string>Google</string>
+		<key>url</key>
 		<string>https://www.google.com/search?q=</string>
 		<key>isEnabled</key>
 		<true/>
 	</dict>
 	<dict>
-		<key>Wolfram Alpha</key>
+		<key>site</key>
+		<string>Wolfram Alpha</string>
+		<key>url</key>
 		<string>https://www.wolframalpha.com/input/?i=</string>
 		<key>isEnabled</key>
 		<true/>
 	</dict>
 	<dict>
-		<key>Youtube</key>
+		<key>site</key>
+		<string>Youtube</string>
+		<key>url</key>
 		<string>https://www.youtube.com/results?search_query=</string>
 		<key>isEnabled</key>
 		<true/>
 	</dict>
 	<dict>
-		<key>Google Maps</key>
+		<key>site</key>
+		<string>Google Maps</string>
+		<key>url</key>
 		<string>https://www.google.com/maps/search/</string>
 		<key>isEnabled</key>
 		<true/>
