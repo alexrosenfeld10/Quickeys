@@ -14,8 +14,11 @@
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
 		EB2959AC1E04F19B00F7B045 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9131E04ED1600C28385 /* ApiKeys.plist */; };
+		EB2CE9E6245DB6340064FF60 /* LaunchAtLogin.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = EB2CE9E5245DB6340064FF60 /* LaunchAtLogin.framework.dSYM */; };
 		EB7944401E1D9D2000851B62 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB79443F1E1D9D2000851B62 /* Urls.plist */; };
 		EB7944421E1D9F5D00851B62 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7944411E1D9F5D00851B62 /* Utility.swift */; };
+		EB97BA24245D2E740002778F /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB97BA23245D2E740002778F /* LaunchAtLogin.framework */; };
+		EB97BA25245D2E830002778F /* LaunchAtLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB97BA23245D2E740002778F /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBDFA90B1E04ECF700C28385 /* PastebinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */; };
 		EBDFA90C1E04ECF700C28385 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90A1E04ECF700C28385 /* Reachability.swift */; };
 		EBDFA9101E04ED0A00C28385 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */; };
@@ -24,6 +27,19 @@
 		EBDFA9181E04ED1600C28385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9141E04ED1600C28385 /* Assets.xcassets */; };
 		EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9151E04ED1600C28385 /* Funk.aiff */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB97BA1E245D2DDC0002778F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EB97BA25245D2E830002778F /* LaunchAtLogin.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8A106CBAB5B0497E2F9560D4 /* libPods-Quickeys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quickeys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,10 +50,12 @@
 		EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Quickeys/EventMonitor.swift; sourceTree = SOURCE_ROOT; };
 		EB1AE15D1DFC59D100D3BE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Quickeys/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		EB2792691DFDC07D00B92AFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EB2CE9E5245DB6340064FF60 /* LaunchAtLogin.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LaunchAtLogin.framework.dSYM; path = Carthage/Build/Mac/LaunchAtLogin.framework.dSYM; sourceTree = "<group>"; };
 		EB3A46F91E19D04300812099 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Quickeys/Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB79443F1E1D9D2000851B62 /* Urls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Urls.plist; path = Quickeys/Resources/Urls.plist; sourceTree = SOURCE_ROOT; };
 		EB7944411E1D9F5D00851B62 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Quickeys/Utility.swift; sourceTree = SOURCE_ROOT; };
+		EB97BA23245D2E740002778F /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastebinAPI.swift; path = Quickeys/Pastebin/PastebinAPI.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA90A1E04ECF700C28385 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Quickeys/Pastebin/Reachability.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTextViewController.swift; path = "Quickeys/Notes Views and Controllers/NotesTextViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB97BA24245D2E740002778F /* LaunchAtLogin.framework in Frameworks */,
 				235CDA325ACB33B7570AFBDC /* libPods-Quickeys.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +92,8 @@
 		D2F5F90D533E8C5376F1688B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB2CE9E5245DB6340064FF60 /* LaunchAtLogin.framework.dSYM */,
+				EB97BA23245D2E740002778F /* LaunchAtLogin.framework */,
 				8A106CBAB5B0497E2F9560D4 /* libPods-Quickeys.a */,
 			);
 			name = Frameworks;
@@ -157,6 +178,8 @@
 				EB66DA621DF497B30009DEE2 /* Frameworks */,
 				EB66DA631DF497B30009DEE2 /* Resources */,
 				2EE5DA6D3F3E0B2A6C3A65E7 /* [CP] Copy Pods Resources */,
+				EB97BA14245D29530002778F /* ShellScript */,
+				EB97BA1E245D2DDC0002778F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -216,6 +239,7 @@
 				EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */,
 				EB27926A1DFDC07D00B92AFE /* README.md in Resources */,
 				EB16DA751E03472900CB7883 /* LICENSE in Resources */,
+				EB2CE9E6245DB6340064FF60 /* LaunchAtLogin.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +281,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		EB97BA14245D29530002778F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/LaunchAtLogin.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n\"${PROJECT_DIR}/Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -414,9 +456,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quickeys/Bridging-Header.h";
@@ -433,9 +479,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quickeys/Bridging-Header.h";
