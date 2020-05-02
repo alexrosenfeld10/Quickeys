@@ -34,7 +34,7 @@
                     </constraints>
                     <popUpButtonCell key="cell" type="roundRect" bezelStyle="roundedRect" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iJM-fo-oJl" userLabel="Search with">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                        <font key="font" metaFont="label" size="12"/>
                         <menu key="menu" id="XMB-Bk-c6g"/>
                     </popUpButtonCell>
                 </popUpButton>
@@ -73,7 +73,7 @@
                     </constraints>
                     <buttonCell key="cell" type="roundRect" title="Pastebin" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3W3-XQ-cbH">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                        <font key="font" metaFont="label" size="12"/>
                     </buttonCell>
                     <connections>
                         <action selector="pastebinClicked:" target="-2" id="IWe-A6-lkC"/>
@@ -83,7 +83,7 @@
                     <rect key="frame" x="210" y="8" width="57" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Search:" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zN8-Mr-f9O">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                        <font key="font" metaFont="label" size="12"/>
                     </buttonCell>
                     <connections>
                         <action selector="searchClicked:" target="-2" id="teh-Vi-Beb"/>
@@ -93,7 +93,7 @@
                     <rect key="frame" x="20" y="8" width="38" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Quit" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6x2-Qf-ffl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                        <font key="font" metaFont="label" size="12"/>
                     </buttonCell>
                     <connections>
                         <action selector="quit:" target="-2" id="mmV-yx-9cO"/>
@@ -112,14 +112,13 @@
                 <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-Ux-m92">
                     <rect key="frame" x="20" y="37" width="332" height="117"/>
                     <subviews>
-                        <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Efy-Fx-tGE">
-                            <rect key="frame" x="0.0" y="0.0" width="332" height="117"/>
+                        <box fixedFrame="YES" title="Box" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efy-Fx-tGE">
+                            <rect key="frame" x="-3" y="-4" width="338" height="121"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <view key="contentView" ambiguous="YES" id="jfN-kW-uHC">
-                                <rect key="frame" x="1" y="1" width="330" height="115"/>
+                            <view key="contentView" id="jfN-kW-uHC">
+                                <rect key="frame" x="3" y="3" width="332" height="103"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
-                            <color key="fillColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </box>
                     </subviews>
                 </customView>
