@@ -3,7 +3,7 @@ A mac menu bar app that provides note taking and other functionality through a q
 
 ## Building and running
 
-1. Install `cocoapods` if you do not have it already. `sudo gem install cocoapods`
+1. Install `cocoapods` if you do not have it already. Run either `sudo gem install cocoapods` or `brew install cocoapods`, whichever you prefer.
 2. Run `pod install` in the root of the cloned repository.
 3. Open `Quickeys.xcproj` in Xcode.
 4. Click the Play button (build and run the current scheme) in Xcode

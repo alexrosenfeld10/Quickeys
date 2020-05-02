@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         eventMonitor?.start()
         
-        let shortcut = MASShortcut.init(keyCode: UInt(kVK_ANSI_8), modifierFlags: UInt(NSEvent.ModifierFlags.command.rawValue + NSEvent.ModifierFlags.shift.rawValue))
+        let shortcut = MASShortcut.init(keyCode: kVK_ANSI_8, modifierFlags: NSEvent.ModifierFlags(rawValue: UInt(NSEvent.ModifierFlags.command.rawValue + NSEvent.ModifierFlags.shift.rawValue)))
         
         MASShortcutMonitor.shared().register(shortcut, withAction: {
             self.togglePopover(sender: self)

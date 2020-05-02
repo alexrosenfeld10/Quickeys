@@ -1,16 +1,16 @@
 PODS:
-  - MASShortcut (2.3.6)
+  - MASShortcut (2.4.0)
 
 DEPENDENCIES:
   - MASShortcut
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - MASShortcut
 
 SPEC CHECKSUMS:
-  MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
+  MASShortcut: d9e4909e878661cc42877cc9d6efbe638273ab57
 
 PODFILE CHECKSUM: 84873acf0087185828bdd6c8df8f5a6ca86cab5c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1

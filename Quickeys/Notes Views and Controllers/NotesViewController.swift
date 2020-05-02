@@ -114,9 +114,9 @@ class NotesViewController: NSViewController, NotesTextViewControllerDelegate {
     
     func searchTextOnWebsite(website: String) {
         // Set our destination url
-        let url_text = urlEscapeText(txt: getHighlightedOrAllTextFromView())
+        let urlText = urlEscapeText(txt: getHighlightedOrAllTextFromView())
         
-        if let url = URL(string: website + url_text), NSWorkspace.shared.open(url) {
+        if let url = URL(string: website + urlText), NSWorkspace.shared.open(url) {
             NSLog("browser opened successfully")
         } else {
             NSLog("browser failed to open")
