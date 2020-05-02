@@ -148,9 +148,9 @@
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" id="nHL-5W-CSF">
                                             <font key="font" metaFont="system"/>
                                             <string key="title">Click and drag to resize
-
 Open / Close: ⌘ ⇧ 8
-Seach (from editor): ⌥ ⏎</string>
+Seach (from editor): ⌘ ⏎
+Pastebin (from editor): ⌥ ⏎</string>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
