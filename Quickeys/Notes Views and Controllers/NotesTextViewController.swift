@@ -17,11 +17,7 @@ class NotesTextViewController: NSTextView {
     
     let appDelegate = NSApplication.shared.delegate as! AppDelegate
     var notesTextViewControllerDelegate: NotesTextViewControllerDelegate?
-    
-    override func awakeFromNib() {
-        self.insertionPointColor = NSColor.black
-    }
-    
+        
     override open func keyDown(with event: NSEvent) {
         if (event.keyCode == 53){
             appDelegate.togglePopover(sender: nil)
