@@ -3,22 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		235CDA325ACB33B7570AFBDC /* libPods-Quickeys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A106CBAB5B0497E2F9560D4 /* libPods-Quickeys.a */; };
+		5B94628125204FBD00FF2278 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5B94628025204FBD00FF2278 /* LaunchAtLogin */; };
 		EB16DA751E03472900CB7883 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB16DA741E03472900CB7883 /* LICENSE */; };
 		EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */; };
 		EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */; };
 		EB1AE15E1DFC59D100D3BE26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE15C1DFC59D100D3BE26 /* MainMenu.xib */; };
 		EB27926A1DFDC07D00B92AFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB2792691DFDC07D00B92AFE /* README.md */; };
 		EB2959AC1E04F19B00F7B045 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9131E04ED1600C28385 /* ApiKeys.plist */; };
-		EB2CE9E6245DB6340064FF60 /* LaunchAtLogin.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = EB2CE9E5245DB6340064FF60 /* LaunchAtLogin.framework.dSYM */; };
 		EB7944401E1D9D2000851B62 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB79443F1E1D9D2000851B62 /* Urls.plist */; };
 		EB7944421E1D9F5D00851B62 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7944411E1D9F5D00851B62 /* Utility.swift */; };
-		EB97BA24245D2E740002778F /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB97BA23245D2E740002778F /* LaunchAtLogin.framework */; };
-		EB97BA25245D2E830002778F /* LaunchAtLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB97BA23245D2E740002778F /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBDFA90B1E04ECF700C28385 /* PastebinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */; };
 		EBDFA90C1E04ECF700C28385 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90A1E04ECF700C28385 /* Reachability.swift */; };
 		EBDFA9101E04ED0A00C28385 /* NotesTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */; };
@@ -35,14 +32,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB97BA25245D2E830002778F /* LaunchAtLogin.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A106CBAB5B0497E2F9560D4 /* libPods-Quickeys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quickeys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DE795853D365A48256C3DA /* Pods-Quickeys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quickeys.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quickeys/Pods-Quickeys.release.xcconfig"; sourceTree = "<group>"; };
 		9A1E950051398524EDACA9F2 /* Pods-Quickeys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quickeys.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quickeys/Pods-Quickeys.debug.xcconfig"; sourceTree = "<group>"; };
 		EB16DA741E03472900CB7883 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -50,12 +45,10 @@
 		EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Quickeys/EventMonitor.swift; sourceTree = SOURCE_ROOT; };
 		EB1AE15D1DFC59D100D3BE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Quickeys/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		EB2792691DFDC07D00B92AFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		EB2CE9E5245DB6340064FF60 /* LaunchAtLogin.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LaunchAtLogin.framework.dSYM; path = Carthage/Build/Mac/LaunchAtLogin.framework.dSYM; sourceTree = "<group>"; };
 		EB3A46F91E19D04300812099 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Quickeys/Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EB66DA651DF497B30009DEE2 /* Quickeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB79443F1E1D9D2000851B62 /* Urls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Urls.plist; path = Quickeys/Resources/Urls.plist; sourceTree = SOURCE_ROOT; };
 		EB7944411E1D9F5D00851B62 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Quickeys/Utility.swift; sourceTree = SOURCE_ROOT; };
-		EB97BA23245D2E740002778F /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		EBDFA9091E04ECF700C28385 /* PastebinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastebinAPI.swift; path = Quickeys/Pastebin/PastebinAPI.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA90A1E04ECF700C28385 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Quickeys/Pastebin/Reachability.swift; sourceTree = SOURCE_ROOT; };
 		EBDFA90D1E04ED0A00C28385 /* NotesTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTextViewController.swift; path = "Quickeys/Notes Views and Controllers/NotesTextViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -72,8 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB97BA24245D2E740002778F /* LaunchAtLogin.framework in Frameworks */,
-				235CDA325ACB33B7570AFBDC /* libPods-Quickeys.a in Frameworks */,
+				5B94628125204FBD00FF2278 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,16 +79,6 @@
 				90DE795853D365A48256C3DA /* Pods-Quickeys.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		D2F5F90D533E8C5376F1688B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB2CE9E5245DB6340064FF60 /* LaunchAtLogin.framework.dSYM */,
-				EB97BA23245D2E740002778F /* LaunchAtLogin.framework */,
-				8A106CBAB5B0497E2F9560D4 /* libPods-Quickeys.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EB16DA761E03474500CB7883 /* Notes Views and Controllers */ = {
@@ -129,7 +111,6 @@
 				C671D5FF82BDD8E4CB6E151A /* Pods */,
 				EB66DA671DF497B30009DEE2 /* Quickeys */,
 				EB66DA661DF497B30009DEE2 /* Products */,
-				D2F5F90D533E8C5376F1688B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,14 +159,17 @@
 				EB66DA621DF497B30009DEE2 /* Frameworks */,
 				EB66DA631DF497B30009DEE2 /* Resources */,
 				2EE5DA6D3F3E0B2A6C3A65E7 /* [CP] Copy Pods Resources */,
-				EB97BA14245D29530002778F /* ShellScript */,
 				EB97BA1E245D2DDC0002778F /* CopyFiles */,
+				5B9462822520505200FF2278 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Quickeys;
+			packageProductDependencies = (
+				5B94628025204FBD00FF2278 /* LaunchAtLogin */,
+			);
 			productName = Quotes;
 			productReference = EB66DA651DF497B30009DEE2 /* Quickeys.app */;
 			productType = "com.apple.product-type.application";
@@ -197,7 +181,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alex Rosenfeld";
 				TargetAttributes = {
 					EB66DA641DF497B30009DEE2 = {
@@ -216,6 +200,9 @@
 				Base,
 			);
 			mainGroup = EB66DA5C1DF497B30009DEE2;
+			packageReferences = (
+				5B94627F25204FBD00FF2278 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = EB66DA661DF497B30009DEE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,7 +225,6 @@
 				EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */,
 				EB27926A1DFDC07D00B92AFE /* README.md in Resources */,
 				EB16DA751E03472900CB7883 /* LICENSE in Resources */,
-				EB2CE9E6245DB6340064FF60 /* LaunchAtLogin.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +249,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quickeys/Pods-Quickeys-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B9462822520505200FF2278 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
 		9149B34862435BDED8901DBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,24 +283,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		EB97BA14245D29530002778F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/LaunchAtLogin.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n\"${PROJECT_DIR}/Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -355,6 +340,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -418,6 +404,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -441,8 +428,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "Quickeys/Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
@@ -460,7 +448,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,7 +474,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Quickeys/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = alexrosenfeld.Quickeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B94627F25204FBD00FF2278 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B94628025204FBD00FF2278 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B94627F25204FBD00FF2278 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EB66DA5D1DF497B30009DEE2 /* Project object */;
 }
