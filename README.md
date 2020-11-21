@@ -5,10 +5,8 @@ A mac menu bar app that provides note taking and other functionality through a q
 
 1. Install `cocoapods` if you do not have it already. Run either `sudo gem install cocoapods` or `brew install cocoapods`, whichever you prefer.
 1. Run `pod install` in the root of the cloned repository.
-1. Install `carthage` if you don't have it already. Run `brew install carthage`.
-1. Run `carthage bootstrap` in the root of the cloned repository.
-1. Open `Quickeys.xcworkspace` in Xcode.
-1. Click the Play button (build and run the current scheme) in Xcode
+1. Open `Quickeys.xcworkspace` in Xcode and let it restore any Swift Package Manager dependencies.
+1. Click the Play button (build and run the current scheme) in Xcode.
 
 Quickeys should now be running!
 
