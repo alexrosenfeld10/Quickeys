@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B94628125204FBD00FF2278 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5B94628025204FBD00FF2278 /* LaunchAtLogin */; };
+		5B94628125204FBD00FF2278 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5B94628025204FBD00FF2278 /* SwiftPackageProductDependency */; };
 		EB16DA751E03472900CB7883 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB16DA741E03472900CB7883 /* LICENSE */; };
 		EB1AE14C1DFC586E00D3BE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1441DFC586E00D3BE26 /* AppDelegate.swift */; };
 		EB1AE14F1DFC586E00D3BE26 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1471DFC586E00D3BE26 /* EventMonitor.swift */; };
@@ -23,6 +23,7 @@
 		EBDFA9121E04ED0A00C28385 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA90F1E04ED0A00C28385 /* NotesViewController.xib */; };
 		EBDFA9181E04ED1600C28385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9141E04ED1600C28385 /* Assets.xcassets */; };
 		EBDFA9191E04ED1600C28385 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EBDFA9151E04ED1600C28385 /* Funk.aiff */; };
+		F68A66674902918E60789A4F /* libPods-Quickeys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300B88882BF8A09B9DAD4E6 /* libPods-Quickeys.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3300B88882BF8A09B9DAD4E6 /* libPods-Quickeys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quickeys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DE795853D365A48256C3DA /* Pods-Quickeys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quickeys.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quickeys/Pods-Quickeys.release.xcconfig"; sourceTree = "<group>"; };
 		9A1E950051398524EDACA9F2 /* Pods-Quickeys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quickeys.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quickeys/Pods-Quickeys.debug.xcconfig"; sourceTree = "<group>"; };
 		EB16DA741E03472900CB7883 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -65,13 +67,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B94628125204FBD00FF2278 /* LaunchAtLogin in Frameworks */,
+				5B94628125204FBD00FF2278 /* BuildFile in Frameworks */,
+				F68A66674902918E60789A4F /* libPods-Quickeys.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EB7E517C1E91E6A16B3A620 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3300B88882BF8A09B9DAD4E6 /* libPods-Quickeys.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C671D5FF82BDD8E4CB6E151A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +122,7 @@
 				C671D5FF82BDD8E4CB6E151A /* Pods */,
 				EB66DA671DF497B30009DEE2 /* Quickeys */,
 				EB66DA661DF497B30009DEE2 /* Products */,
+				9EB7E517C1E91E6A16B3A620 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,7 +180,7 @@
 			);
 			name = Quickeys;
 			packageProductDependencies = (
-				5B94628025204FBD00FF2278 /* LaunchAtLogin */,
+				5B94628025204FBD00FF2278 /* SwiftPackageProductDependency */,
 			);
 			productName = Quotes;
 			productReference = EB66DA651DF497B30009DEE2 /* Quickeys.app */;
@@ -201,7 +213,7 @@
 			);
 			mainGroup = EB66DA5C1DF497B30009DEE2;
 			packageReferences = (
-				5B94627F25204FBD00FF2278 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+				5B94627F25204FBD00FF2278 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = EB66DA661DF497B30009DEE2 /* Products */;
 			projectDirPath = "";
@@ -512,7 +524,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5B94627F25204FBD00FF2278 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+		5B94627F25204FBD00FF2278 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin/";
 			requirement = {
@@ -523,9 +535,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5B94628025204FBD00FF2278 /* LaunchAtLogin */ = {
+		5B94628025204FBD00FF2278 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5B94627F25204FBD00FF2278 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			package = 5B94627F25204FBD00FF2278 /* RemoteSwiftPackageReference */;
 			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
