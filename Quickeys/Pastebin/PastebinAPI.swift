@@ -17,7 +17,7 @@ class PastebinAPI {
         API_KEY = Utility.valueForKey(from: "ApiKeys", named: "API_KEY")!
     }
     
-    let url = NSURL(string: "http://pastebin.com/api/api_post.php")
+    let url = NSURL(string: "https://pastebin.com/api/api_post.php")
     
     func postPasteRequest(urlEscapedContent: String, callback: @escaping (String) -> ()) {
         var request = URLRequest(url: URL(string: "http://pastebin.com/api/api_post.php")!)
